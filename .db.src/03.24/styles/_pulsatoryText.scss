@@ -1,0 +1,19 @@
+.pulsatory-text {
+  display: block;
+  position: relative;
+  height: $fontMiddle;
+  // padding-left: 10px;
+  left: 10px;
+  top: 0;
+  &__line {
+    visibility: hidden;
+    position: absolute;
+    display: inline-block;
+    // height: $fontMiddle;
+    color: $light;
+    font-size: $fontMiddle;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 4px #536206;
+  }
+}

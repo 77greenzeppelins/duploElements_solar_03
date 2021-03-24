@@ -1,0 +1,9 @@
+// .container-outer {
+//   position: relative !important;
+// }
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}

@@ -1,0 +1,144 @@
+.form-container {
+  //==================
+  // position: relative;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  //=================
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+//============================================================
+.message-for-smarty--off {
+  position: absolute;
+  top: -201px;
+  width: 100%;
+  height: 200px;
+  color: $green;
+  display: none;
+}
+.message-for-smarty--on {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
+//============================================================
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // max-width: 600px;
+
+  .form-input-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    padding-bottom: 50px;
+    width: 90%;
+    // &:nth-of-type(1) {
+    //   padding-bottom: 30px;
+    // }
+    &__header {
+      width: 90%;
+      color: $light;
+      font-size: $fontSmall;
+      padding-bottom: 20px;
+      font-weight: 400;
+      line-height: 2;
+    }
+
+    &__input {
+      position: relative;
+      width: 80%;
+
+      input {
+        width: 80%;
+        color: $light;
+        font-size: $fontSmall;
+        // border-radius: 50px;
+        padding: 5px 0 5px 30px;
+        // background: $darkGrey2;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #363636;
+        cursor: pointer;
+        transition: all 0.2s;
+        // transform-origin: 50% 50%;
+
+        &:focus {
+          border-bottom: 1px solid $green;
+          outline: transparent;
+          // box-shadow: 0px 0px 1px $green;
+          // border-radius: 50px;
+          // background-color: transparent;
+        }
+        &:focus + label,
+        &:not(:placeholder-shown) + label {
+          color: #363636;
+          font-weight: 600;
+
+          transform: translateY(-20px);
+        }
+      }
+      label {
+        position: absolute;
+        left: 0px;
+        color: $green;
+        font-size: $fontVerySmall;
+        // text-transform: uppercase;
+        // font-weight: 600;
+        pointer-events: none;
+        transition: 0.3s ease;
+      }
+    }
+  }
+  .form-button-box {
+    width: 90%;
+    &__button {
+      display: inline-block;
+      border-radius: 40px;
+      background: $green1;
+      color: $light;
+      text-shadow: 0 0 5px #536206;
+      font-size: $fontSmall;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 35px;
+    }
+  }
+}
+
+// .block-invisible {
+//   display: none;
+// }
+// .btn {
+//   outline: 1px solid #363636;
+//   border: none;
+//   background-color: transparent;
+//   color: #fff;
+// }
+// .input {
+//   outline: 1px solid #363636;
+//   border: none;
+//   background-color: transparent;
+//   color: #fff;
+// }
+// input:nth-of-type(2) {
+//   margin-top: 20px;
+// }

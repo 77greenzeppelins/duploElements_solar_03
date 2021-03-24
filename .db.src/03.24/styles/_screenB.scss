@@ -1,0 +1,195 @@
+.screen-b {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__header {
+    position: relative;
+    height: $headerSize;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    .line {
+      visibility: hidden;
+      position: absolute;
+      bottom: 0;
+      right: 0%;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      background: $lightBgr1;
+      opacity: 0.5;
+    }
+    .logo-contacts {
+      display: block;
+      // transition: 0.3s;
+      .logo {
+        transform: translateX(100%);
+        color: $green;
+        font-size: $fontSmall;
+      }
+    }
+  }
+  &__main {
+    height: $mainSize; // 100%;
+    // padding-top: 3vh;
+    .main-box {
+      padding-top: 4vh;
+    }
+    .text-box-1 li:nth-of-type(2),
+    .text-box-2 li:nth-of-type(2) {
+      font-weight: 600;
+    }
+    .text-box-3 li:nth-of-type(3) {
+      font-weight: 600;
+    }
+    .text-box-4 {
+      display: none;
+    }
+  }
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: $footerSize;
+    // width: $wraperWidth; //add if position fixed
+    width: 100%; //delate if position fixed
+    margin-inline: auto;
+    overflow: hidden; //for mobile/email icons
+    .line {
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0%;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      background: $lightBgr1;
+      opacity: 0.5;
+    }
+    .contact-icons {
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      transform: translateY(-100%);
+      visibility: hidden;
+      .contact-icon {
+        padding-left: 1rem;
+        height: 5rem;
+        width: 5rem;
+        opacity: 0.5;
+        transition: transform 0.4s;
+        svg {
+          height: 90%;
+          width: 90%;
+        }
+      }
+    }
+    a {
+      // border-style: none none none solid;
+      border-width: 1px;
+      border-color: $light;
+      // border-radius: 50%;
+      opacity: 0.5;
+      outline: transparent;
+    }
+  }
+  // @media
+  @media (hover: hover) {
+    .contact-icon:hover {
+      transform: scale(1.2);
+      opacity: 1;
+      transition: 0.3s;
+    }
+  }
+
+  // @media (hover: hover) {
+  //   .logo-contacts:hover {
+  //     transform: scale(1.2);
+  //     opacity: 1;
+  //     transition: 0.3s;
+  //     transform-origin: bottom right;
+  //   }
+  // }
+
+  @media screen and (min-height: 700px) {
+    .contact-icons {
+      align-items: center;
+    }
+  }
+
+  //.logo-contacts
+
+  // &__top {
+  //   padding-top: 2vh;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-end;
+  //   // height: 20vh;
+  //   width: 100%;
+
+  //   &-textbox {
+  //     // height: 100%;
+  //     // padding-bottom: 50px;
+  //   }
+
+  //   &-textbox2 {
+  //     display: none;
+  //     // padding-bottom: 50px;
+  //   }
+  // }
+  // &__bottom {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-end;
+  //   // height: 20vh;
+  //   width: 100%;
+  //   padding-bottom: 20px;
+  //   &-textbox {
+  //     // height: 100%;
+  //   }
+  //   &-textbox2 {
+  //     display: none;
+  //     flex-direction: column;
+  //   }
+  //   // &-textbox3 {
+  //   //   display: none;
+  //   //   padding-left: 10px;
+  //   //   height: $fontMiddle;
+  //   //   color: $light;
+  //   //   font-size: $fontMiddle;
+  //   // }
+  // }
+  // &__nav {
+  //   height: 20vh;
+  //   padding-right: 15px;
+  // }
+
+  // &__logo {
+  //   //
+  //   // position: fixed;
+  //   // bottom: 0;
+  //   // left: 0;
+  //   // right: 0;
+  //   // height: 150px;
+  //   // width: 100%;
+  //   //
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   // height: 20vh;
+  // }
+}
+
+//media
+// @media (min-width: 580px) {
+//   .screen-b__top {
+//     justify-content: flex-start;
+//   }
+//   .screen-b__bottom {
+//     padding-bottom: 0;
+//   }
+// }
