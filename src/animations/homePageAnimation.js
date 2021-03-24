@@ -25,16 +25,24 @@ const homePageAnimation = () => {
   //
   gsap.config({ nullTargetWarn: false });
   //gsap.defaults({ease: 'Power2.easeOut'})
-  // gsap.set('.screen-a-container .logo', { autoAlpha: 0 });
-  // gsap.set('.screen-b', { autoAlpha: 0 });
-  // gsap.set('.logo-link .logo', { duration: 0.1, autoAlpha: 1 });
   //roman
-  //gsap.set(['.screen-a-container .logo', '.screen-b'], { autoAlpha: 0 } )
-  gsap.set(['.screen-b__header .line', '.screen-b__header .logo'], {
-    autoAlpha: 0,
-  });
+  gsap.set(
+    [
+      '.screen-a-container .logo',
+      '.screen-b',
+      '.screen-b__header .line',
+      '.screen-b__header .logo',
+      '.text-section__header',
+      '.text-section__spans',
+      '.text-section__line',
+    ],
+    {
+      autoAlpha: 0,
+    }
+  );
 
-  tl.add(logoAnimation())
+  tl.add('lab1')
+    .add(logoAnimation())
     .to(
       '.container-outer',
       {
@@ -57,13 +65,15 @@ const homePageAnimation = () => {
       },
       '-=2'
     )
-    .add('labScreenB1')
+    .add('lab2')
     .to(
       ['.screen-b__footer .line', '.screen-b__header .line'],
       {
         duration: 1.5,
-        autoAlpha: 1,
-        scaleX: 1,
+        autoAlpha: 0.5,
+        // opacity: 0.3,
+        scaleX: 0.5,
+        // scaleY: 0.5,
         transformOrigin: 'bottom right',
       },
       '<'
@@ -74,14 +84,54 @@ const homePageAnimation = () => {
       { duration: 1.5, y: 0, autoAlpha: 1 },
       '<'
     )
+
+    .to(
+      '.main-frame',
+      { duration: 2, scaleY: 1, ease: 'elastic.out(1.2,1)' },
+      '<0.9'
+    )
+    //jednak "set" przed "main-frame"
+    .to(
+      ['.text-section__header'], //'.text-section__spans', '.text-section__line'
+      { autoAlpha: 1 },
+      '-=1.2'
+    )
+    .from(
+      '.text-section__header',
+      {
+        duration: 1.5,
+        y: -50,
+        scale: 1.2,
+        transformOrigin: '0% 0%',
+      },
+      '<'
+    )
+    .to(
+      ['.text-section__spans'], //'.text-section__spans', '.text-section__line'
+      { autoAlpha: 1 },
+      '-=0.5'
+    )
+    .from(
+      '.text-section__spans',
+      {
+        duration: 1.5,
+        xPercent: -100,
+        transformOrigin: '0% 0%',
+        // opacity: 0,
+      },
+      '<'
+    )
+    //wyobraź sobie te wszystkie...
+    .add('lab3')
+
     //=========================
     //
-    .add(textBoxAnimation('.text-box-1 .text-box__line'), '>0.5')
-    .add(textBoxAnimation('.text-box-2 .text-box__line'), '>0.9')
-    .add(textBoxAnimation('.text-box-3 .text-box__line'), '>0.9')
-    .set('.text-box-4', { autoAlpha: 1, display: 'block' })
-    .add(textBoxAnimation('.text-box-4 .text-box__line'), '>0.5')
-    .add(pulsatoryAnimation('.pulsatory-text__line'))
+    // .add(textBoxAnimation('.text-box-1 .text-box__line', 1))
+    // .add(textBoxAnimation('.text-box-2 .text-box__line'), '>0.9')
+    // .add(textBoxAnimation('.text-box-3 .text-box__line'), '>0.9')
+    // .set('.text-box-4', { autoAlpha: 1, display: 'block' })
+    // .add(textBoxAnimation('.text-box-4 .text-box__line'), '>0.5')
+    // .add(pulsatoryAnimation('.pulsatory-text__line'))
     //
 
     // .add(textBoxAnimation('.screen-b__top .text-box__text-line'), '<0.5')
@@ -111,7 +161,7 @@ const homePageAnimation = () => {
     //   }
     // )
     // .set('.screen-b__bottom-textbox3', { display: 'block' })
-    .add('labScreenB2');
+    .add('lab4');
   // .add(textBoxAnimation('.screen-b__top-textbox2 .text-box__text-line'))
   // .add(textBoxAnimation('.screen-b__bottom-textbox2 .text-box__text-line'))
   // .set('.screen-b__bottom-textbox3', { display: 'block' })

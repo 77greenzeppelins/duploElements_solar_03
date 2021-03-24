@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 //components
 import Logo from '../atoms/logo';
-// import LogoLink from '../molecules/logoLink';
+import TextSection from '../molecules/textSection';
 import TextBox from '../molecules/textBox';
 import PulsatoryText from '../molecules/pulsatoryText';
 import Navigation from '../molecules/navigation';
@@ -16,7 +16,7 @@ import {
 //icons
 import { GoMail } from 'react-icons/go';
 import { ImPhone } from 'react-icons/im';
-import { ImEnvelop } from 'react-icons/im';
+// import { ImEnvelop } from 'react-icons/im';
 
 const ScreenB = ({ timeLine }) => {
   useEffect(() => {
@@ -34,9 +34,12 @@ const ScreenB = ({ timeLine }) => {
       </header>
 
       <main className="screen-b__main">
-        <div className="main-box text-box-1">
-          <TextBox data={textBox1} />
+        <div className="main-frame">
+          <TextSection />
         </div>
+
+        {/*
+        
         <div className="main-box text-box-2">
           <TextBox data={textBox2} />
         </div>
@@ -46,7 +49,7 @@ const ScreenB = ({ timeLine }) => {
         <div className="main-box text-box-4">
           <TextBox data={textBox4} />
           <PulsatoryText props={itemsToBuy} />
-        </div>
+        </div> */}
       </main>
 
       <footer className="screen-b__footer">
@@ -59,7 +62,7 @@ const ScreenB = ({ timeLine }) => {
             href="mailto:77greenzeppelins@gmail.com"
             className="contact-icon email"
           >
-            <ImEnvelop />
+            <GoMail />
           </a>
         </nav>
       </footer>

@@ -1,16 +1,12 @@
 //fonts: Playfair & Montserrat
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600;800&display=swap');
-
-//
-
 //
 @import 'variables';
-// @import 'utilities';
-// //
 @import '_logo';
 @import '_logoLink';
 @import '_screenA';
 @import '_screenB';
+@import '_textSection';
 @import '_textBox';
 @import '_pulsatoryText';
 @import '_contacts';
@@ -30,13 +26,13 @@ html {
 
   overflow-x: hidden;
   overscroll-behavior: none;
-  font-family: $sanserif;
+  font-family: $sanSerif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $light;
-  background: $green1;
+  color: $dark;
+  background: $dark;
 }
 // body {
 //   should work for mobile 100vh...

@@ -1,46 +1,33 @@
 //colors
-// $light: #c2c7bd;
 $light: hsl(0, 0, 100);
-// $light: #161a02;
-// $dark: #121212;
-$dark: #434343;
-// $dark: hsl(0, 0, 0);
-// $grey: rgb(132, 129, 122);
-// $brand: hsl(120, 100, 42);
-//green...................................
+$dark: #000;
 $green: #add100;
-// $green: #7b920a;
-//........................................
-$brand: #fed330;
-// $brand: rgb(229, 142, 38);
-// $yellow: rgb(229, 142, 38);
-// $blue: rgb(6, 82, 221);
+$blue: #2f80ed;
+//sizes
 $wraperWidth: #{'min(95%, 700px)'};
+$headerSize: 7vh;
+$footerSize: 13vh;
+$mainSize: 80vh;
 //
-//gradients
-
-$darkGrey1: linear-gradient(to bottom right, #434343 5%, #000000, #434343 95%);
-$darkGrey2: linear-gradient(to bottom right, #000000, #434343 95%);
-$lightBgr1: linear-gradient(to right, #d6d0d0, #fff);
-
-// $brand: linear-gradient(to left, #e65c00, #f9d423);
-// $darkBlue: linear-gradient(to top left, #16222a, #3a6073); //blue-dark
-// $dark: linear-gradient(to top left, #4b6cb7, #182848); //dlue-semidark
-// $dark: linear-gradient(to bottom right, #00d2ff, #3a7bd5); //dlue-juicy...
-$green1: linear-gradient(to bottom right, #add100, #3f4a05);
-
-//fonts
-//
-$serif: 'Playfair Display', serif;
-
-//
-$sanserif: 'Montserrat', sans-serif;
-// $sanserif: 'Playfair Display', serif;
 $reactFont: #{'calc(10px + 2vmin)'};
+$fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
+$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.5rem)'};
 $fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
-$fontSmall: #{'clamp(0.83rem, 2.8vw, 1.2rem)'};
+$fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
 $fontVerySmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
 //icons
 $iconSize: #{'clamp(30px, 16vw, 50px)'};
 $iconNav: #{'clamp(30px, 5.1vw, 50px)'};
 // $fontMiddle: #{'clamp(1rem, 3vw, 1.3rem)'};
+//gradients
+$green1: linear-gradient(to bottom right, #add100, #3f4a05);
+$darkGrey1: linear-gradient(to bottom right, #000000, #434343);
+//inactive
+$darkGrey2: linear-gradient(to bottom right, #000000, #434343);
+$lightBgr1: linear-gradient(to right, #d6d0d0, #fff);
+$blueBeach: linear-gradient(to right bottom, #2f80ed, #56ccf2);
+$clearSky: linear-gradient(to right, #005c97, #363795);
+//fonts
+$serif: 'Playfair Display', serif;
+$sanSerif: 'Montserrat', sans-serif;
+// $sanserif: 'Playfair Display', serif;

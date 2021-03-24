@@ -8,9 +8,9 @@
   &__line {
     user-select: none;
     visibility: hidden;
-    color: $light;
+    color: $dark;
     // mix-blend-mode: difference;
     font-size: $fontMiddle;
-    text-shadow: 0 0 3px #536206;
+    // text-shadow: 0 0 3px #536206;
   }
 }
