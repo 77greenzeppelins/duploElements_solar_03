@@ -3,8 +3,20 @@ import { gsap } from 'gsap';
 // import { CSSPlugin } from 'gsap/CSSPlugin';
 
 import logoAnimation from './logoAnimation';
-//====================================================
+import textBoxAnimation from './textBoxAnimation';
+import pulsatoryAnimation from './pulsatoryTextAnimation';
+import logoLinkAnimation from './logoLinkAnimation';
 
+//====================================================
+// import { GSDevTools } from 'gsap/GSDevTools';
+// gsap.registerPlugin(GSDevTools);
+//plugins regiastration =>obligatory in case of using 'clearProps'...
+// gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
+//=====================================================
+// const tl = gsap.timeline({
+//   defaults: { ease: 'Power2.easeOut' },
+// });
+//
 const homePageAnimation = () => {
   //
   const tl = gsap.timeline({
@@ -12,17 +24,17 @@ const homePageAnimation = () => {
   });
   //
   gsap.config({ nullTargetWarn: false });
-
+  //gsap.defaults({ease: 'Power2.easeOut'})
+  //roman
   gsap.set(
     [
       '.screen-a-container .logo',
       '.screen-b',
-      // '.screen-b__header .line',
-      // '.screen-b__header .logo',
-      // '.text-section__header',
-      // '.text-section__spans',
-      // '.text-section__line',
-      '.frame__header',
+      '.screen-b__header .line',
+      '.screen-b__header .logo',
+      '.text-section__header',
+      '.text-section__spans',
+      '.text-section__line',
     ],
     {
       autoAlpha: 0,
@@ -60,9 +72,9 @@ const homePageAnimation = () => {
         duration: 1.5,
         autoAlpha: 0.5,
         // opacity: 0.3,
-        scaleX: 1,
+        scaleX: 0.5,
         // scaleY: 0.5,
-        transformOrigin: 'bottom left',
+        transformOrigin: 'bottom right',
       },
       '<'
     )
@@ -72,54 +84,43 @@ const homePageAnimation = () => {
       { duration: 1.5, y: 0, autoAlpha: 1 },
       '<'
     )
-    //
-    // .from('.screen-b__main', { duration: 2, justifyContent: 'center' }, '<')
-    // .from('.screen-b__main', { duration: 2 }, '<')
-    .set('.frame__header', { autoAlpha: 0, y: '+=200px' }, '<')
-    .set('.frame__spans', { autoAlpha: 0 }, '<')
+
     .to(
-      '.frame__header',
-      { duration: 2, y: '-=200px', autoAlpha: 1, scale: 0.8 },
+      '.main-frame',
+      { duration: 2, scaleY: 1, ease: 'elastic.out(1.2,1)' },
+      '<0.9'
+    )
+    //
+    .to(
+      ['.text-section__header'], //'.text-section__spans', '.text-section__line'
+      { autoAlpha: 1 },
+      '-=1.2'
+    )
+    .from(
+      '.text-section__header',
+      {
+        duration: 1.5,
+        y: -50,
+        scale: 1.2,
+        transformOrigin: '0% 0%',
+      },
       '<'
     )
-    .to('.frame__spans', { duration: 1, autoAlpha: 1 })
-    // .to(
-    //   '.main-frame',
-    //   { duration: 2, scaleY: 1, ease: 'elastic.out(1.2,1)' },
-    //   '<0.9'npm start
-
-    // )
-    // //
-    // .to(
-    //   ['.text-section__header'], //'.text-section__spans', '.text-section__line'
-    //   { autoAlpha: 1 },
-    //   '-=1.2'
-    // )
-    // .from(
-    //   '.text-section__header',
-    //   {
-    //     duration: 1.5,
-    //     y: -50,
-    //     scale: 1.2,
-    //     transformOrigin: '0% 0%',
-    //   },
-    //   '<'
-    // )
-    // .to(
-    //   ['.text-section__spans'], //'.text-section__spans', '.text-section__line'
-    //   { autoAlpha: 1 },
-    //   '-=0.5'
-    // )
-    // .from(
-    //   '.text-section__spans',
-    //   {
-    //     duration: 1.5,
-    //     xPercent: -100,
-    //     transformOrigin: '0% 0%',
-    //     // opacity: 0,
-    //   },
-    //   '<'
-    // )
+    .to(
+      ['.text-section__spans'], //'.text-section__spans', '.text-section__line'
+      { autoAlpha: 1 },
+      '-=0.5'
+    )
+    .from(
+      '.text-section__spans',
+      {
+        duration: 1.5,
+        xPercent: -100,
+        transformOrigin: '0% 0%',
+        // opacity: 0,
+      },
+      '<'
+    )
     //wyobraź sobie te wszystkie...
     .add('lab3')
 

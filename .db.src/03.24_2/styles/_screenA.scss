@@ -1,0 +1,9 @@
+.screen-a-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-inline: auto;
+  width: $wraperWidth;
+  height: 100vh;
+  background-color: transparent;
+}

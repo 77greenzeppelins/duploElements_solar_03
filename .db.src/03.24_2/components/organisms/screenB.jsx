@@ -34,18 +34,9 @@ const ScreenB = ({ timeLine }) => {
       </header>
 
       <main className="screen-b__main">
-        <div className="frame">
-          <h1 className="frame__header">Wyobraź sobie proszę</h1>
-          <p className="frame__spans">
-            <span>nowoczesne</span>
-            <span>panele</span>
-            <span>słoneczne</span>
-          </p>
-        </div>
-
-        {/* <div className="main-frame">
+        <div className="main-frame">
           <TextSection />
-        </div> */}
+        </div>
 
         {/*
         
@@ -64,15 +55,14 @@ const ScreenB = ({ timeLine }) => {
       <footer className="screen-b__footer">
         <div className="line" />
         <nav className="contact-icons">
+          <a href="tel:798-905-558" className="contact-icon phone">
+            <ImPhone />
+          </a>
           <a
             href="mailto:77greenzeppelins@gmail.com"
             className="contact-icon email"
           >
             <GoMail />
-          </a>
-
-          <a href="tel:798-905-558" className="contact-icon phone">
-            <ImPhone />
           </a>
         </nav>
       </footer>

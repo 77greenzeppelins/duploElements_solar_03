@@ -1,16 +1,8 @@
 const textBox1 = [
-  'Wyobraź sobie proszę',
-  'nowoczesne',
-  'panele',
-  'słoneczne',
-  'na dachu Twojego domu...',
+  { id: 1, text: 'Wyobraź sobie proszę' },
+  { id: 2, text: 'nowoczesne panele słoneczne' },
+  { id: 3, text: 'na dachu Twojego domu...' },
 ];
-
-// const textBox1 = [
-//   { id: 1, text: 'Wyobraź sobie proszę' },
-//   { id: 2, text: 'nowoczesne panele słoneczne' },
-//   { id: 3, text: 'na dachu Twojego domu...' },
-// ];
 const textBox2 = [
   { id: 1, text: 'Wyobraź sobie te wszystkie' },
   { id: 2, text: 'niezastąpione sprzęty domowe' },
