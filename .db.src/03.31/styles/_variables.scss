@@ -1,0 +1,42 @@
+//
+$tab-color: #ffffff;
+$active-color: #4563f3;
+$inactive-color: #bbc3cc;
+$background-color: #dde1e5;
+$shadow-color: darken($background-color, 15%);
+//colors
+$light: hsl(0, 0, 100);
+$dark: #000;
+$darkLighten5: lighten($dark, 5%);
+$green: #add100;
+$greenDarker5: darken($green, 5%);
+$blue: #2f80ed;
+//sizes
+$wraperWidth: #{'min(93%, 700px)'};
+$headerSize: 0vh;
+$footerSize: 13vh;
+$mainSize: 100vh - ($footerSize + $headerSize);
+//
+$reactFont: #{'calc(10px + 2vmin)'};
+$fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
+$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.9rem)'};
+$fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
+$fontMiddle2: #{'clamp(1.3rem, 5.1vw, 2rem)'};
+$fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
+$fontVerySmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
+//icons
+$iconSize: #{'clamp(30px, 5vw, 40px)'};
+$iconNav: #{'clamp(30px, 5.1vw, 50px)'};
+// $fontMiddle: #{'clamp(1rem, 3vw, 1.3rem)'};
+//gradients
+$green1: linear-gradient(to bottom right, #add100, #3f4a05);
+$darkGrey1: linear-gradient(to bottom right, #000000, #434343);
+//inactive
+$darkGrey2: linear-gradient(to bottom, #000000, $darkLighten5, #000000 60%);
+$lightBgr1: linear-gradient(to right, #d6d0d0, #fff);
+$blueBeach: linear-gradient(to right bottom, #2f80ed, #56ccf2);
+$clearSky: linear-gradient(to right, #005c97, #363795);
+//fonts
+$serif: 'Playfair Display', serif;
+$sanSerif: 'Montserrat', sans-serif;
+// $sanserif: 'Playfair Display', serif;

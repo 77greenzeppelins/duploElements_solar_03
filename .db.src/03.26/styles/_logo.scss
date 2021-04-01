@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  color: $light;
+  font-size: $fontVerySmall;
+  letter-spacing: 2px;
+  user-select: none;
+  span {
+    display: block;
+  }
+  &__duplo {
+    font-weight: 800;
+  }
+  &__elements {
+    font-weight: 400;
+  }
+}

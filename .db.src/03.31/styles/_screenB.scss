@@ -1,0 +1,128 @@
+.screen-b {
+  height: 100%;
+  &__main {
+    height: $mainSize; // 100%;
+    width: 100%;
+    // padding-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem 0;
+    //
+    .main-top {
+      visibility: hidden;
+      position: relative;
+      // background: $darkGrey2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      width: 100%;
+      // overflow: hidden;
+      // opacity: 0.5;
+      svg {
+        width: 100%;
+        height: 100%;
+        // position: absolute;
+        // left: -50%;
+      }
+
+      .sunRD {
+        visibility: hidden;
+        fill: yellow;
+        stroke: none;
+        z-index: 100;
+      }
+    }
+    .main-bottom {
+      height: 50%;
+      .frame {
+        &__header {
+          visibility: hidden;
+          color: $light;
+          font-size: $fontLarge;
+          font-family: $sanSerif;
+        }
+
+        &__spans {
+          // visibility: hidden;
+          position: relative;
+          // padding-left: 4%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: flex-start;
+          margin-top: 5px;
+          font-size: $fontMiddle2;
+          font-weight: 400;
+          color: $light;
+          line-height: 1.9;
+        }
+        &__spans span:nth-of-type(n + 2) {
+          color: $green;
+        }
+        &__span {
+          visibility: hidden;
+        }
+
+        // &__spans::before {
+        //   content: '';
+        //   position: absolute;
+        //   left: 0px;
+        //   height: 80%;
+        //   width: 2px;
+        //   background-color: $greenDarker5;
+        // }
+
+        &__line {
+          visibility: hidden;
+          font-size: $fontMiddle2;
+          font-weight: 400;
+          color: $light;
+        }
+      }
+
+      // @media screen and (min-height: 700px) {
+      //   &__spans::after {
+      //     height: 100%;
+      //   }
+      // }
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    height: $footerSize;
+    width: $wraperWidth;
+    overflow: hidden;
+    // visibility: hidden;
+    .line {
+      // visibility: hidden;
+      position: absolute;
+      top: 0;
+      right: 0%;
+      height: 1px;
+      width: 100%;
+      transform: scaleX(0);
+      background: $lightBgr1;
+      opacity: 0;
+    }
+  }
+
+  // @media (hover: hover) {
+  //   .logo-contacts:hover {
+  //     transform: scale(1.2);
+  //     opacity: 1;
+  //     transition: 0.3s;
+  //     transform-origin: bottom right;
+  //   }
+  // }
+
+  @media screen and (min-height: 700px) {
+    .contact-icons {
+      align-items: center;
+    }
+  }
+}

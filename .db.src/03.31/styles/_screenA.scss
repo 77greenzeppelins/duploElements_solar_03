@@ -1,0 +1,13 @@
+.screen-a-container {
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-inline: auto;
+  width: $wraperWidth;
+  height: 100vh;
+  .logo {
+    color: $green;
+    font-size: $fontMiddle;
+  }
+}

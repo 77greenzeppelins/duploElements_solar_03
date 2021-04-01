@@ -1,0 +1,70 @@
+.contact {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  &__direct {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    // transform: translateY(-100%);
+    .contact__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $iconSize;
+      width: $iconSize;
+      opacity: 0.5;
+      color: $light;
+      margin-left: 1rem;
+      transition: transform 0.4s;
+      svg {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .phone {
+      margin-left: 2rem;
+    }
+    // @media
+    @media (hover: hover) {
+      .contact__icon:hover {
+        transform: scale(1.1);
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+  }
+  //   button {
+  //     all: unset;
+  //     cursor: pointer;
+  //   }
+  &__form {
+    height: 100%;
+    transition: 0.4s;
+    // opacity: 0.5;
+  }
+  //   @media (hover: hover) {
+  //     .contact__form:hover {
+  //       transform: scale(1.05);
+  //       opacity: 1;
+  //       transition: 0.4s;
+  //     }
+  //   }
+  .contact__logo {
+    margin-right: 5px;
+    .logo {
+      opacity: 0.5;
+      transition: 0.4s;
+    }
+  }
+  @media (hover: hover) {
+    .contact__logo .logo:hover {
+      transform: scale(1.02);
+      opacity: 1;
+      transition: 0.4s;
+    }
+  }
+}
