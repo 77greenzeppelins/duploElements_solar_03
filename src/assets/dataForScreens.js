@@ -1,32 +1,50 @@
-const textBox1 = [
+const dream2 = [
   'Wyobraź sobie proszę',
   'nowoczesne',
   'panele',
   'słoneczne',
   'na dachu Twojego domu...',
 ];
-
+const dream1 = [
+  'Wyobraź sobie proszę',
+  'wszystkie',
+  'urządzenia',
+  'elektryczne',
+  'których używasz na codzień...',
+];
+const dream3 = [
+  'Wyobraź sobie jeszcze',
+  'jakieś',
+  'zero',
+  'złotych',
+  'na rachunkach za energię',
+];
+const finalText = [
+  '...i jeszcze wyobraź sobie,',
+  'że zaoszczędzone pieniądze',
+  'z radością przeznaczasz na',
+];
 // const textBox1 = [
 //   { id: 1, text: 'Wyobraź sobie proszę' },
 //   { id: 2, text: 'nowoczesne panele słoneczne' },
 //   { id: 3, text: 'na dachu Twojego domu...' },
 // ];
-const textBox2 = [
-  { id: 1, text: 'Wyobraź sobie te wszystkie' },
-  { id: 2, text: 'niezastąpione sprzęty domowe' },
-  { id: 3, text: 'których używasz na codzień...' },
-];
+// const textBox2 = [
+//   { id: 1, text: 'Wyobraź sobie te wszystkie' },
+//   { id: 2, text: 'niezastąpione sprzęty domowe' },
+//   { id: 3, text: 'których używasz na codzień...' },
+// ];
 
-const textBox3 = [
-  { id: 1, text: 'Wyobraź sobie jeszcze,' },
-  { id: 2, text: 'że to wszystko pięknie działa' },
-  { id: 3, text: 'za około zero złotych...' },
-];
+// const textBox3 = [
+//   { id: 1, text: 'Wyobraź sobie jeszcze,' },
+//   { id: 2, text: 'że to wszystko pięknie działa' },
+//   { id: 3, text: 'za około zero złotych...' },
+// ];
 
-const textBox4 = [
-  { id: 1, text: 'a zaoszczędzone pieniądze ' },
-  { id: 2, text: 'z radością przeznaczasz na' },
-];
+// const textBox4 = [
+//   { id: 1, text: 'a zaoszczędzone pieniądze ' },
+//   { id: 2, text: 'z radością przeznaczasz na' },
+// ];
 
 const itemsToBuy = [
   'pasjonujące książki...',
@@ -140,10 +158,14 @@ const emailInputWarnings = [
 // };
 
 export {
-  textBox1,
-  textBox2,
-  textBox3,
-  textBox4,
+  dream1,
+  dream2,
+  dream3,
+  finalText,
+  // textBox1,
+  // textBox2,
+  // textBox3,
+  // textBox4,
   itemsToBuy,
   messageForSmarty,
   telephonInputLabel,

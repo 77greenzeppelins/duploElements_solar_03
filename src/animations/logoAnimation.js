@@ -3,7 +3,7 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 
 //import of animation
-import { charsWordReversed, charsWordSimply } from './allTextEffects';
+import { splitToCharsReversed, splitToCharsSimply } from './splitTextEffects';
 //plugins regiastration =>obligatory in case of using 'clearProps'...
 gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 //
@@ -11,36 +11,35 @@ gsap.registerPlugin(CSSPlugin, CSSRulePlugin);
 const logoAnimation = () => {
   //========================== effects registration
   gsap.registerEffect({
-    name: charsWordReversed.name,
-    effect: charsWordReversed.effect,
+    name: splitToCharsReversed.name,
+    effect: splitToCharsReversed.effect,
   });
 
   gsap.registerEffect({
-    name: charsWordSimply.name,
-    effect: charsWordSimply.effect,
+    name: splitToCharsSimply.name,
+    effect: splitToCharsSimply.effect,
+  });
+  gsap.set('.screen-a-container', {
+    autoAlpha: 0,
   });
   //let's ROCK with a timeline for logo animation !
   //
   const tl = gsap.timeline();
   tl
     //basic setting that allowe to avoid 'Flash Of Unstyled Content'
-    .set('.screen-a-container .logo', { duration: 0, autoAlpha: 1 })
-    //==================================================================
-
+    .to('.screen-a-container', { duration: 0, autoAlpha: 1 })
     .add(
-      gsap.effects.charsWordReversed('.screen-a-container .logo__elements', {
+      gsap.effects.splitToCharsReversed('.screen-a-container .logo__elements', {
         duration: 3,
         rotate: 90,
       })
     )
-    //=============
     .add(
-      gsap.effects.charsWordSimply('.screen-a-container .logo__duplo', {
+      gsap.effects.splitToCharsSimply('.screen-a-container .logo__duplo', {
         duration: 2,
       }),
       '-=1.5'
     )
-    //==========
     .set(
       [
         '.screen-a-container .logo__elements',
@@ -70,7 +69,6 @@ const logoAnimation = () => {
     )
     //==============================================================
     .set('.screen-a-container', {
-      duration: 0,
       display: 'none',
     });
   return tl;

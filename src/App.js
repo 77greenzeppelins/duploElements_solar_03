@@ -1,28 +1,35 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+// import { Switch, Route } from 'react-router-dom';
 //styles
 import './styles/App.scss';
 //components = pages
-import Home from './components/pages/home';
-import Contacts from './components/pages/contacts';
-import NotFound from './components/pages/notFound';
+// import Home from './components/pages/home';
+import Main from './components/pages/main';
 
-const routes = [
-  { id: 1, path: '/', name: 'home', Destination: Home },
-  { id: 2, path: '/contacts', name: 'contacts', Destination: Contacts },
-  { id: 3, path: '*', name: 'noFound', Destination: NotFound },
-];
+// import NotFound from './components/pages/notFound';
+
+// const routes = [
+//   { id: 1, path: '/', name: 'home', Destination: Home },
+//   { id: 3, path: '*', name: 'noFound', Destination: NotFound },
+// ];
 
 const App = () => {
+  useEffect(() => {
+    console.log('<App> / useState...it is gsap', gsap);
+    //I am not sure if it works...
+    gsap.to('body', { duration: 0, css: { visibility: 'visible' } });
+  }, []);
   return (
     <>
-      <Switch>
+      <Main />
+      {/* <Switch>
         {routes.map(({ id, path, name, Destination }) => (
           <Route exact key={id} path={path} name={name}>
             <Destination />
           </Route>
         ))}
-      </Switch>
+      </Switch> */}
     </>
   );
 };

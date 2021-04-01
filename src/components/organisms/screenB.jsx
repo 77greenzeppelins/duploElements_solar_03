@@ -1,110 +1,44 @@
 import React, { useEffect } from 'react';
 //components
-import Logo from '../atoms/logo';
-import TextSection from '../molecules/textSection';
-import TextBox from '../molecules/textBox';
-import PulsatoryText from '../molecules/pulsatoryText';
-import Navigation from '../molecules/navigation';
+import ContactBar from '../molecules/contactBar';
+import ContactTab from '../molecules/contactTab';
+// import TextSection from '../molecules/textSection';
+// import PulsatoryText from '../molecules/pulsatoryText';
+// import Navigation from '../molecules/navigation';
 //data for TextBoxes
-import {
-  textBox1,
-  textBox2,
-  textBox3,
-  textBox4,
-  itemsToBuy,
-} from '../../assets/dataForScreens';
-//icons
-import { GoMail } from 'react-icons/go';
-import { ImPhone } from 'react-icons/im';
+import { dream1 } from '../../assets/dataForScreens';
+
 // import { ImEnvelop } from 'react-icons/im';
 
-const ScreenB = ({ timeLine }) => {
+const ScreenB = ({ timeLine, state }) => {
   useEffect(() => {
-    console.log('%c testing in ScreenB', 'color: yellow');
-    console.log('......timeline from Navigation:', timeLine.labels);
+    console.log('%c<ScreenB> / useEffect', 'color: yellow');
+    console.log('state', state);
   });
 
   return (
     <div className="screen-b">
-      <header className="screen-b__header">
-        <div className="line" />
-        <div className="logo-contacts">
-          <Logo />
-        </div>
-      </header>
-
       <main className="screen-b__main">
-        <div className="frame">
-          <h1 className="frame__header">Wyobraź sobie proszę</h1>
-          <p className="frame__spans">
-            <span>nowoczesne</span>
-            <span>panele</span>
-            <span>słoneczne</span>
-          </p>
+        <div className="main-top">
+          <ContactTab />
+          {state && <h1>...state has changed!</h1>}
         </div>
-
-        {/* <div className="main-frame">
-          <TextSection />
-        </div> */}
-
-        {/*
-        
-        <div className="main-box text-box-2">
-          <TextBox data={textBox2} />
+        <div className="main-bottom">
+          <div className="frame">
+            <h1 className="frame__header">{dream1[0]}</h1>
+            <p className="frame__spans">
+              <span className="frame__span">nowoczesne</span>
+              <span className="frame__span">panele</span>
+              <span className="frame__span">słoneczne</span>
+            </p>
+            <p className="frame__line">na dachu Twojego domu...</p>
+          </div>
         </div>
-        <div className="main-box text-box-3">
-          <TextBox data={textBox3} />
-        </div>
-        <div className="main-box text-box-4">
-          <TextBox data={textBox4} />
-          <PulsatoryText props={itemsToBuy} />
-        </div> */}
       </main>
-
       <footer className="screen-b__footer">
         <div className="line" />
-        <nav className="contact-icons">
-          <a
-            href="mailto:77greenzeppelins@gmail.com"
-            className="contact-icon email"
-          >
-            <GoMail />
-          </a>
-
-          <a href="tel:798-905-558" className="contact-icon phone">
-            <ImPhone />
-          </a>
-        </nav>
+        <ContactBar />
       </footer>
-
-      {/* <div className="screen-b__top"> */}
-      {/* <div className="screen-b__top-textbox">
-          <TextBox data={textBox2} />
-        </div> */}
-      {/* <div className="screen-b__top-textbox2">
-          <TextBox data={screenBTopX} />
-        </div> */}
-      {/* </div> */}
-      {/* <div className="screen-b__bottom"> */}
-      {/* <div className="screen-b__bottom-textbox">
-          <TextBox data={screenBBottom} />
-        </div> */}
-      {/* <div className="screen-b__bottom-textbox2">
-          <TextBox data={screenBBottomX} />
-          <PulsatoryText props={itemsToBuy} />
-        </div> */}
-      {/* <div className="screen-b__bottom-textbox3">
-          <PulsatoryText props={itemsToBuy} />
-        </div> */}
-      {/* </div> */}
-      {}
-      {/* <div className="screen-b__nav">
-        <Navigation timeLine={timeLine} />
-      </div> */}
-      {}
-      {/* <div className="screen-b__logo">
-        <LogoLink timeLine={timeLine} />
-      </div> */}
     </div>
   );
 };

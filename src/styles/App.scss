@@ -3,14 +3,13 @@
 //
 @import 'variables';
 @import '_logo';
-@import '_logoLink';
 @import '_screenA';
 @import '_screenB';
-@import '_textSection';
-@import '_textBox';
+@import '_sky';
+@import '_contactBar';
+@import '_contactTab';
 @import '_pulsatoryText';
 @import '_contacts';
-@import '_form';
 @import '_navigation';
 
 //from Kevin Powell, Responsive designe...
@@ -23,12 +22,12 @@
 body,
 html {
   //   user-select: none;
-
+  visibility: hidden;
   overflow-x: hidden;
   overscroll-behavior: none;
   font-family: $sanSerif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $dark;
@@ -68,8 +67,6 @@ a {
 ul {
   padding: 0;
   margin: 0;
-}
-li {
   list-style: none;
 }
 
@@ -77,21 +74,29 @@ img {
   display: block;
   max-width: 100%;
 }
-
-:focus {
-  outline: 2px solid #434343;
-  outline-offset: 1px;
+address {
+  font-style: normal;
 }
-button:focus {
-  outline: none;
+button {
+  background-color: transparent;
+  font-family: $sanSerif;
+  color: $light;
+  border: none;
+  outline: transparent;
 }
-button:focus {
-  box-shadow: 0 0 0 1px white, 0 0 0 3px transparent;
-}
-
-::-moz-focus-inner {
-  border: 0;
-}
+// :focus {
+//   outline: 2px solid #434343;
+//   outline-offset: 1px;
+// }
+// button:focus {
+//   outline: none;
+// }
+// button:focus {
+//   box-shadow: 0 0 0 1px white, 0 0 0 3px transparent;
+// }
+// ::-moz-focus-inner {
+//   border: 0;
+// }
 //utility classes
 .container-outer {
   position: fixed;
@@ -101,7 +106,7 @@ button:focus {
   overflow: hidden;
 }
 .container-inner {
-  position: relative;
+  // position: relative;
   margin-inline: auto;
   width: $wraperWidth;
   height: 100vh;
