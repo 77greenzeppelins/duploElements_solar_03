@@ -5,22 +5,23 @@
   align-items: center;
   height: 100%;
   width: 100%;
+
   &__direct {
     display: flex;
     align-items: center;
     height: 100%;
-    // transform: translateY(-100%);
     .contact__icon {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: $iconSize;
+      height: 100%;
       width: $iconSize;
       opacity: 0.5;
       color: $light;
       margin-left: 1rem;
       transition: transform 0.4s;
-      svg {
+      * {
+        pointer-events: none;
         height: 100%;
         width: 100%;
       }
@@ -29,13 +30,13 @@
       margin-left: 2rem;
     }
     // @media
-    @media (hover: hover) {
-      .contact__icon:hover {
-        transform: scale(1.1);
-        opacity: 1;
-        transition: 0.4s;
-      }
-    }
+    // @media (hover: hover) {
+    //   .contact__icon:hover {
+    //     transform: scale(1.1);
+    //     opacity: 1;
+    //     transition: 0.4s;
+    //   }
+    // }
   }
   //   button {
   //     all: unset;
@@ -43,7 +44,8 @@
   //   }
   &__form {
     height: 100%;
-    transition: 0.4s;
+    // transition: 0.4s;
+    cursor: pointer;
     // opacity: 0.5;
   }
   //   @media (hover: hover) {
@@ -54,17 +56,20 @@
   //     }
   //   }
   .contact__logo {
+    display: flex;
+    align-items: center;
     margin-right: 5px;
+    // height: 100%;
     .logo {
       opacity: 0.5;
-      transition: 0.4s;
+      // transition: 0.4s;
     }
   }
-  @media (hover: hover) {
-    .contact__logo .logo:hover {
-      transform: scale(1.02);
-      opacity: 1;
-      transition: 0.4s;
-    }
-  }
+  // @media (hover: hover) {
+  //   .contact__logo .logo:hover {
+  //     transform: scale(1.02);
+  //     opacity: 1;
+  //     transition: 0.4s;
+  //   }
+  // }
 }

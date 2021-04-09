@@ -88,13 +88,14 @@ const main2Animation = setState => {
     //   },
     //   '-=10'
     // )
-    //======spans
+
     .fromTo(
       '.sunRD',
       { scale: 0, transformOrigin: 'center', autoAlpha: 0 },
       { scale: 0.9, duration: 5, autoAlpha: 1 },
       '<'
     )
+    //======spans
     .set('.dream1 .span1', { autoAlpha: 1 }, '-=5')
     .add(
       gsap.effects.splitToChars('.dream1 .span1', {

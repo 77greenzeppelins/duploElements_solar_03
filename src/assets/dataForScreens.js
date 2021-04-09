@@ -1,29 +1,51 @@
+const dream1 = [
+  'Wyobraź sobie',
+  'wszystkie',
+  'urządzenia',
+  'elektryczne,',
+  'które używasz na codzień...',
+];
 const dream2 = [
-  'Wyobraź sobie proszę',
+  'Wyobraź sobie',
   'nowoczesne',
   'panele',
   'słoneczne',
   'na dachu Twojego domu...',
 ];
-const dream1 = [
-  'Wyobraź sobie proszę',
-  'wszystkie',
-  'urządzenia',
-  'elektryczne',
-  'których używasz na codzień...',
-];
 const dream3 = [
-  'Wyobraź sobie jeszcze',
+  'Wyobraź sobie',
   'jakieś',
   'zero',
   'złotych',
   'na rachunkach za energię',
 ];
 const finalText = [
-  '...i jeszcze wyobraź sobie,',
-  'że zaoszczędzone pieniądze',
-  'z radością przeznaczasz na',
+  'Wyobraź sobie',
+  'oszczędzone',
+  'pieniądze,',
+  'które przeznaczasz na',
 ];
+const itemsToBuy = [
+  'pasjonujące książki...',
+  'prezenty dla dzieci...',
+  'cele charytatywne...',
+  'hamburgery i frytki...',
+  'egzotyczne podróże...',
+  'odważne inwestycje...',
+  'odjechane koncerty...',
+  'zakupowe szaleństwa...',
+  'dobre whisky z Islay...',
+  'bezdomne zwierząta...',
+];
+
+const aboutHistory = {
+  line1: 'Najlepsze solary pod słońcem.',
+  line2:
+    'Właśnie tym dzielimy się z naszymi Klienami. Czcesz aby Słońce było do Twojej dyspozycji i działało na Twój rachunek? Zaufaj nam. Wiemy jak to zrobić!',
+  line3:
+    'Kilka słów o tym, jak doszliśmy do tego, że Słońce powinno działać w naszej ekipie...',
+};
+
 // const textBox1 = [
 //   { id: 1, text: 'Wyobraź sobie proszę' },
 //   { id: 2, text: 'nowoczesne panele słoneczne' },
@@ -45,19 +67,6 @@ const finalText = [
 //   { id: 1, text: 'a zaoszczędzone pieniądze ' },
 //   { id: 2, text: 'z radością przeznaczasz na' },
 // ];
-
-const itemsToBuy = [
-  'pasjonujące książki...',
-  'prezenty dla dzieci...',
-  'cele charytatywne...',
-  'hamburgery i frytki...',
-  'egzotyczne podróże...',
-  'odważne inwestycje...',
-  'odjechane koncerty...',
-  'zakupowe szaleństwa...',
-  'dobre whisky z Islay...',
-  'bezdomne zwierząta...',
-];
 
 //Date for: Page/contacts; Components/molecule/form = <Form>
 const messageForSmarty = [
@@ -162,11 +171,9 @@ export {
   dream2,
   dream3,
   finalText,
-  // textBox1,
-  // textBox2,
-  // textBox3,
-  // textBox4,
   itemsToBuy,
+  aboutHistory,
+  //
   messageForSmarty,
   telephonInputLabel,
   emailInputLabel,

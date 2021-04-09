@@ -1,0 +1,15 @@
+.pulsatory-container {
+  display: block;
+  position: relative;
+  width: 120%;
+  &__line {
+    visibility: hidden;
+    position: absolute;
+    font-size: $fontMiddle2;
+    font-weight: 400;
+    color: $light;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    transform: rotateX(90deg);
+  }
+}

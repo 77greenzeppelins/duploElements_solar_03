@@ -1,77 +1,160 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 //components
 import ContactBar from '../molecules/contactBar';
+import PulsatoryContainer from '../molecules/pulsatoryContainer';
+import ModalAbout from '../molecules/modalAbout';
 //data for TextBoxes
-import { dream1, dream2, dream3, finalText } from '../../assets/dataForScreens';
+import {
+  dream1,
+  dream2,
+  dream3,
+  finalText,
+  itemsToBuy,
+} from '../../assets/dataForScreens';
 //animation
-import main2Animation from '../../animations/main2Animation';
+import {
+  screenBAnimation,
+  screenBAnimationTl,
+} from '../../animations/screenBAnimation';
+
 //SVG
-import SvgSunShine1 from '../../assets/svg/SunShine1';
-// import SvgSkyHome1 from '../../assets/svg/SkyHome1';
+import SvgSkyHome1 from '../../assets/svg/SkyHome1';
+import SvgQuestionMark2 from '../../assets/svg/QuestionMark2';
 
 const MainScreenB = () => {
+  //state for modal
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  console.log(
+    `%c<MainScreenB> / isModalVisible: `,
+    'color: #ff0099',
+    isModalVisible
+  );
+  const [userClick, setUserClick] = useState('');
+  console.log(
+    `%c<MainScreenB> / openModalAbout / userClick`,
+    'color: #FF0099',
+    userClick
+  );
+  //
+  const modalAboutComponentContainer = useRef();
+  //
   useEffect(() => {
-    main2Animation();
-    // console.log('%c<ScreenB> / useEffect', 'color: yellow');
-    console.log('<MainScreenB> / useEffect / after animation...');
-  });
-
+    screenBAnimation();
+    console.log(
+      `%c<MainScreenB> / useEffect / tl`,
+      'color: #FF0099',
+      screenBAnimationTl
+    );
+  }, []);
+  //
+  const openModalAbout = event => {
+    setUserClick(event.type);
+    //main function: change the value of state
+    setIsModalVisible(true);
+    //additional fuction: stop screenBAnimation !
+    // isModalVisible ? screenBAnimationTl.play() : screenBAnimationTl.pause();
+    screenBAnimationTl.pause();
+    //additional fuction:  modify "duploELEMENTS" style after clicking
+    gsap.to(modalAboutComponentContainer.current, { display: 'block' });
+    // const ClickEventOn = gsap.timeline();
+    // const ClickEventOff = gsap.timeline();
+    // isModalVisible
+    //   ? ClickEventOff.to('.contact__logo .logo', {
+    //       opacity: 0.5,
+    //       color: '#ffffff',
+    //       scale: 1,
+    //     })
+    //   : ClickEventOn.to('.contact__logo .logo', {
+    //       opacity: 1,
+    //       color: '#add100',
+    //       scale: 1.1,
+    //     });
+  };
+  const closeModalAbout = () => {
+    setIsModalVisible(false);
+    screenBAnimationTl.play();
+    gsap.to(modalAboutComponentContainer.current, { display: 'none' });
+  };
   return (
     <div className="screen-b">
       <main className="screen-b__main">
         <div className="main-top">
-          <SvgSunShine1 />
-          {/* <SvgSkyHome1 /> */}
+          <SvgSkyHome1 />
+          <div className="poster">
+            <div className="poster__one">
+              <p className="poster__one--text">możliwe</p>
+              <div className="poster__one--question-mark">
+                <SvgQuestionMark2 />
+              </div>
+            </div>
+            <div className="poster__two"></div>
+          </div>
         </div>
         <div className="main-bottom">
           <div className="frame">
             {/*==========================*/}
-            <h1 className="frame__header dream1">{dream1[0]}</h1>
-            <p className="frame__spans dream1">
-              <span className="frame__span span1">{dream1[1]}</span>
-              <span className="frame__span span2">{dream1[2]}</span>
-              <span className="frame__span span3">{dream1[3]}</span>
-            </p>
-            <p className="frame__line line1">{dream1[4]}</p>
+            <section className="dream1">
+              <h3 className="frame__header">{dream1[0]}</h3>
+              <ul className="frame__spans">
+                <li className="frame__span line1">{dream1[1]}</li>
+                <li className="frame__span line2">{dream1[2]}</li>
+                <li className="frame__span line3">{dream1[3]}</li>
+                <li className="frame__span line4">{dream1[4]}</li>
+              </ul>
+            </section>
             {/*==========================*/}
-            <h1 className="frame__header dream2">{dream2[0]}</h1>
-            <p className="frame__spans dream2">
-              <span className="frame__span span1">{dream2[1]}</span>
-              <span className="frame__span span2">{dream2[2]}</span>
-              <span className="frame__span span3">{dream2[3]}</span>
-            </p>
-            <p className="frame__line line1">{dream2[4]}</p>
+            <div className="dream2">
+              <h1 className="frame__header">{dream2[0]}</h1>
+              <ul className="frame__spans">
+                <li className="frame__span line1">{dream2[1]}</li>
+                <li className="frame__span line2">{dream2[2]}</li>
+                <li className="frame__span line3">{dream2[3]}</li>
+                <li className="frame__span line4">{dream2[4]}</li>
+              </ul>
+            </div>
             {/*==========================*/}
-            <h1 className="frame__header dream3">{dream3[0]}</h1>
-            <p className="frame__spans dream3">
-              <span className="frame__span span1">{dream3[1]}</span>
-              <span className="frame__span span2">{dream3[2]}</span>
-              <span className="frame__span span3">{dream3[3]}</span>
-            </p>
-            <p className="frame__line line1">{dream3[4]}</p>
+            <section className="dream3">
+              <h1 className="frame__header">{dream3[0]}</h1>
+              <ul className="frame__spans">
+                <li className="frame__span line1">{dream3[1]}</li>
+                <li className="frame__span line2">{dream3[2]}</li>
+                <li className="frame__span line3">{dream3[3]}</li>
+                <li className="frame__span line4">{dream3[4]}</li>
+              </ul>
+            </section>
             {/*==========================*/}
-            <p className="frame__spans final">
-              <span className="frame__span final1">{finalText[1]}</span>
-              <span className="frame__span final2">{finalText[2]}</span>
-              <span className="frame__span final3">{finalText[3]}</span>
-              <span className="frame__span final4">{finalText[4]}</span>
-            </p>
+            <section className="final">
+              <h1 className="frame__header">{finalText[0]}</h1>
+              <ul className="frame__spans">
+                <li className="frame__span line1">{finalText[1]}</li>
+                <li className="frame__span line2">{finalText[2]}</li>
+                <li className="frame__span line3">{finalText[3]}</li>
+                <PulsatoryContainer
+                  itemsToBuy={itemsToBuy}
+                  // className="frame__spans pulsatory-text"
+                />
+              </ul>
+            </section>
           </div>
         </div>
       </main>
+      <article ref={modalAboutComponentContainer} className="screen-b__about ">
+        <ModalAbout
+          closeModalAbout={closeModalAbout}
+          isModalVisible={isModalVisible}
+          userClick={userClick}
+        />
+      </article>
       <footer className="screen-b__footer">
         <div className="line" />
-        <ContactBar />
+        <ContactBar
+          openModalAbout={openModalAbout}
+          timeLine={screenBAnimationTl}
+        />
       </footer>
     </div>
   );
 };
 
 export default MainScreenB;
-
-/**
- *       {console.log(
-        `%c.............return section from ScreenB`,
-        'color: yellow'
-      )}
- */
