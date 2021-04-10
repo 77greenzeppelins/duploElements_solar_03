@@ -1,0 +1,1 @@
+export { default as QuestionMark2 } from './QuestionMark2'
