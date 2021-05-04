@@ -12,7 +12,7 @@ gsap.registerPlugin(CustomEase);
 const screenBAnimationTl = gsap.timeline({
   defaults: { ease: 'Power2.easeOut' },
   onStart: console.log,
-  onStartParams: ['screenBAnimation wystartowała'],
+  onStartParams: ['screenBAnimation / onStartParams'],
   onComplete: console.log,
   onCompleteParams: ['screenBAnimation finito'],
 });
@@ -286,7 +286,7 @@ const screenBAnimation = () => {
       )
     )
     .add(pulsatoryAnimation('.pulsatory-container__line'))
-    .add('lab6');
+    .add();
 
   // .clear(sunRingRotation('.sunRU'))
   // .to('.poster', { display: 'block' }, '>')

@@ -38,11 +38,15 @@ const itemsToBuy = [
   'bezdomne zwierząta...',
 ];
 
-const modalAboutText = {
-  line1: 'Najlepsze solary pod Słońcem!',
-  line2:
-    'Właśnie tym dzielimy się z naszymi Klienami. Chcesz aby Słońce było do Twojej dyspozycji i działało na Twój rachunek? Zaufaj duploELEMENTS. Wiemy jak to zrobić!',
-  line3:
+const pageAboutText = {
+  header: 'Najlepsze solary pod Słońcem!',
+  section1: 'Właśnie tym dzielimy się z naszymi Klienami.',
+  section2: 'Czy Słońce może działać na Twój rachunek?',
+  section3: 'Jasne, że TAK!',
+  section4: 'W duploELEMENTS wiemy jak to zrobić!',
+  // section5: 'Wiemy jak to zrobić!',
+
+  ourHistoryLink:
     'Kilka słów o tym, jak doszliśmy do tego, że Słońce powinno działać w naszej ekipie...',
   scope:
     'Działamy na terenie województwa Dolnośląskiego, Opolskiego, Lubuskiego, Śląskiego',
@@ -59,6 +63,22 @@ const modalAboutText = {
 const ourStory = {
   story:
     'W branży budowlanej działamy od 2000 roku. Zdobywaliśmy doświadczenie na licznych inwestycjach w kraju i za granicą. Pewnego, szalenie pracowitego dnia, kiedy nie wszystko szło po maszej myśl a ja właśnie nuciłem sobie "Alvays look on the bright side of life" nastąpił przełom. W zasadzie to oślepiło mnie Słońce. Ale było w tym rónież jakieś olśnienie! Świat jakby na momen się zatrzymał... A do mnie dotarła pewna myśl.. Zapragnąłem mieć Słońce w swojej ekipie, współpracować z Nim (a może Nią ?!)... Dlatego powstało duploELEMENTS! ',
+};
+const localization = [
+  'Lokalizacja',
+  'ul. Zacisze XXX',
+  '58-200 Dzierżoniów',
+  "50° 43' 55.8516'' N",
+  "16° 39' 38.6928'' E",
+];
+
+const scope =
+  'Działamy na terenie województwa Dolnośląskiego, Opolskiego, Lubuskiego, Śląskiego';
+
+const pageAboutTextBottom = {
+  header1: ['Krótka historia naszego', 'Przewrótu Kopernikańskiego'],
+  header2: ['Treściwy formularz kontaktowy', 'dla tych, co lubią pisać'],
+  header3: ['Dane kontaktowe, czyli...', 'że istniejemy i gdzie działamy.'],
 };
 
 // const textBox1 = [
@@ -83,69 +103,20 @@ const ourStory = {
 //   { id: 2, text: 'z radością przeznaczasz na' },
 // ];
 
-//Date for: Page/contacts; Components/molecule/form = <Form>
-const messageForSmarty = [
-  { id: 1, message: 'same puste pola...' },
-  { id: 2, message: 'jest w tym coś poetyckiego...' },
-  { id: 3, message: 'mimo to zapraszam do kontaktu!' },
-];
-const telephonInputLabel = [
-  {
-    id: 1,
-    text: 'Cenisz sobie otwarty, żywy dialog?',
-  },
-  {
-    id: 2,
-    text: 'Proponuję zatem kontakt telefoniczny.',
-  },
-];
-const telephonInputWarnings = [
-  {
-    id: 1,
-    message: 'Chyba zaponiałeś o jakiej cyferce... Sprawdź proszę',
-  },
-  {
-    id: 2,
-    message: 'Upewnij się proszę czy ',
-  },
-];
-const emailInputLabel = [
-  {
-    id: 1,
-    text: 'Chcesz potrenować warsztat literacki?',
-  },
-  {
-    id: 2,
-    text: 'Zapraszam do kontaktu mailowego.',
-  },
-];
-const emailInputWarnings = [
-  {
-    id: 1,
-    message: 'Chyba zaponiałeś o jakiej cyferce... Sprawdź proszę',
-  },
-  {
-    id: 2,
-    message: 'Upewnij się proszę czy ',
-  },
-];
-
-//==================================================================
-// const screenLinesText = {
-//   article1a: 'Wyobraź sobie proszę',
-//   article1b: 'nowoczesne panele słoneczne',
-//   article1c: 'na dachu Twojego domu...',
-//   //
-//   article2a: 'Wyobraź sobie te wszystkie',
-//   article2b: 'niezastąpione sprzęty domowe',
-//   article2c: 'których używasz na codzień...',
-//   //
-//   article3a: 'Teraz wyobraź sobie proszę,',
-//   article3b: 'że to wszystko pięknie działa',
-//   article3c: 'za dokładnie 0,00 zł....',
-//   article3d: 'a zaoszczędzone pieniądze ',
-//   article3e: 'z rozkoszą przeznaczasz',
-// };
+export {
+  dream1,
+  dream2,
+  dream3,
+  finalText,
+  itemsToBuy,
+  pageAboutText,
+  ourStory,
+  //
+  pageAboutTextBottom,
+  localization,
+  scope,
+  //
+};
 
 //=================================================================
 // const contactPageInvitation = {
@@ -181,18 +152,49 @@ const emailInputWarnings = [
 //   numberTypes: 'Czyzby twój numer składał sie nie tylko z cyfr???',
 // };
 
-export {
-  dream1,
-  dream2,
-  dream3,
-  finalText,
-  itemsToBuy,
-  modalAboutText,
-  ourStory,
-  //
-  messageForSmarty,
-  telephonInputLabel,
-  emailInputLabel,
-  telephonInputWarnings,
-  emailInputWarnings,
-};
+//Date for: Page/contacts; Components/molecule/form = <Form>
+// const messageForSmarty = [
+//   { id: 1, message: 'same puste pola...' },
+//   { id: 2, message: 'jest w tym coś poetyckiego...' },
+//   { id: 3, message: 'mimo to zapraszam do kontaktu!' },
+// ];
+// const telephonInputLabel = [
+//   {
+//     id: 1,
+//     text: 'Cenisz sobie otwarty, żywy dialog?',
+//   },
+//   {
+//     id: 2,
+//     text: 'Proponuję zatem kontakt telefoniczny.',
+//   },
+// ];
+// const telephonInputWarnings = [
+//   {
+//     id: 1,
+//     message: 'Chyba zaponiałeś o jakiej cyferce... Sprawdź proszę',
+//   },
+//   {
+//     id: 2,
+//     message: 'Upewnij się proszę czy ',
+//   },
+// ];
+// const emailInputLabel = [
+//   {
+//     id: 1,
+//     text: 'Chcesz potrenować warsztat literacki?',
+//   },
+//   {
+//     id: 2,
+//     text: 'Zapraszam do kontaktu mailowego.',
+//   },
+// ];
+// const emailInputWarnings = [
+//   {
+//     id: 1,
+//     message: 'Chyba zaponiałeś o jakiej cyferce... Sprawdź proszę',
+//   },
+//   {
+//     id: 2,
+//     message: 'Upewnij się proszę czy ',
+//   },
+// ];

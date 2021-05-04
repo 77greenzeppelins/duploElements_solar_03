@@ -1,10 +1,9 @@
 .logo {
   display: flex;
-  color: $light;
-  font-size: $fontSmall;
-  letter-spacing: 2px;
+  color: $dark; // just to hide within bgc...
+  font-size: $fontMiddle;
+  letter-spacing: 3px;
   user-select: none;
-  cursor: pointer;
   span {
     display: block;
   }
@@ -15,3 +14,5 @@
     font-weight: 400;
   }
 }
+
+//version 4.14

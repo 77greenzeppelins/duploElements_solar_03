@@ -6,7 +6,8 @@ $background-color: #dde1e5;
 $shadow-color: darken($background-color, 15%);
 //colors
 $light: hsl(0, 0, 100);
-$dark: #000;
+// $dark: #000;
+$dark: #1f1f1f;
 $darkLighten50: lighten($dark, 50%);
 $darkLighten80: lighten($dark, 80%);
 
@@ -16,12 +17,15 @@ $greenDarker5: darken($green, 5%);
 $blue: #2f80ed;
 $blueSky: #0ed2f7;
 $yellow: #ffe000;
-//sizes
+//sizes of page sections
 $wraperWidth: #{'min(91%, 700px)'};
 $headerSize: 0vh;
 $footerSize: 11vh;
 $modalAboutSize: 100vh - $footerSize;
 $mainSize: 100vh - ($footerSize + $headerSize);
+
+$topWrapper: 30vh;
+$bottomWrapper: 70vh - $footerSize;
 //
 $reactFont: #{'calc(10px + 2vmin)'};
 $fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
@@ -33,6 +37,8 @@ $fontVerySmall: #{'clamp(0.5rem, 2.8vw, 0.7rem)'};
 //icons
 $iconSize: #{'clamp(30px, 5vw, 40px)'};
 $iconNav: #{'clamp(30px, 5.1vw, 50px)'};
+$iconNavWrapper: #{'clamp(40px, 6.7vw, 60px)'};
+
 // $fontMiddle: #{'clamp(1rem, 3vw, 1.3rem)'};
 //gradients
 $green1: linear-gradient(to bottom right, #add100, #3f4a05);

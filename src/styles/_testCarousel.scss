@@ -1,0 +1,181 @@
+.slider-container {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  transform: translateX(0);
+  .slide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 1rem;
+    user-select: none;
+    flex-shrink: 0;
+    &__product {
+    }
+    &__icon {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid darken($light, 50);
+      border-radius: 10px;
+      svg {
+        width: 60% !important;
+        height: 60% !important;
+      }
+    }
+  }
+}
+.dots-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 50%;
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid darken($light, 50);
+    color: transparent;
+  }
+}
+.arrows {
+  position: absolute;
+  height: $iconSize;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: $iconSize;
+    height: $iconSize;
+    cursor: pointer;
+  }
+  .left {
+    // visibility: hidden;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .right {
+    // visibility: hidden;
+    right: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.glass-footer-wrapper {
+  position: fixed;
+  bottom: 0;
+  margin-inline: auto;
+  width: $wraperWidth;
+  height: $footerSize;
+  overflow: hidden;
+}
+.glass-footer-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 90%;
+  background-color: $dark;
+  //   background: rgba(255, 255, 255, 0.1);
+  //   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  //   border: 1px solid rgba(255, 255, 255, 0.5);
+  //   border-right: 1px solid rgba(255, 255, 255, 0.2);
+  //   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  //   backdrop-filter: blur(25px);
+  //   border-radius: 10px;
+}
+.glass-footer-buttons-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+  align-items: center;
+  gap: 15px;
+}
+.glass-footer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $iconNavWrapper;
+  width: $iconNavWrapper;
+  cursor: pointer;
+  &__icon {
+    height: $iconNav;
+    width: $iconNav;
+    color: $light;
+    opacity: 0.5;
+  }
+}
+.style1 {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+}
+.style-neumorphism {
+  border-radius: 4px;
+  background-color: $dark;
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.1),
+    2px 2px 10px rgba(0, 0, 0, 0.9);
+  border: 2px solid $dark;
+  transition: box-shadow ease 0.2s;
+}
+.style-neumorphism:hover {
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.1),
+    2px 2px 10px rgba(0, 0, 0, 0.9),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 10px rgba(0, 0, 0, 0.9);
+  transition: box-shadow ease 0.2s;
+}
+// .glass-footer-button__icon.style-neumorphism.svg {
+//   padding: 5px;
+//   height: $iconNavWrapper;
+//   width: $iconNavWrapper;
+// }
+.glass-footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $iconNavWrapper;
+  width: $iconNavWrapper;
+  cursor: pointer;
+  opacity: 0.5;
+  padding: 5px;
+}
+.svg-neumorphism {
+  border-radius: 4px;
+  background-color: $dark;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.1),
+    5px 5px 10px rgba(0, 0, 0, 0.9);
+  border: 2px solid $dark;
+  transition: box-shadow ease 0.2s;
+}
+.glass-footer-icon:hover {
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.1),
+    2px 2px 10px rgba(0, 0, 0, 0.9),
+    inset -1px -1px 3px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 10px rgba(0, 0, 0, 0.9);
+  transition: box-shadow ease 0.2s;
+}
+.svg-sole:hover {
+  opacity: 1;
+}

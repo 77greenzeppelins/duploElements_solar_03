@@ -1,6 +1,6 @@
 #sky1 {
   .sunRD {
-    visibility: hidden;
+    // visibility: hidden;
     fill: yellow;
     stroke: none;
     z-index: 100;
@@ -32,13 +32,12 @@
     fill: $darkLighten80;
   }
   .solarA {
-    visibility: hidden;
+    // visibility: hidden;
     fill: $green;
   }
   .solarB {
-    visibility: hidden;
+    // visibility: hidden;
   }
-
   .treeBody {
     fill: $darkLighten50;
   }
@@ -48,9 +47,9 @@
 }
 
 //
-.ray7-mask {
-  visibility: hidden;
-  path {
-    stroke: yellow;
-  }
-}
+// .ray7-mask {
+//   // visibility: hidden;
+//   path {
+//     stroke: yellow;
+//   }
+// }

@@ -1,1 +1,1 @@
-export { default as QuestionMark2 } from './QuestionMark2'
+export { default as SvgSkyHome1 } from './SvgSkyHome1';

@@ -13,7 +13,12 @@ const {
   localization,
 } = modalAboutText;
 
-const ModalAbout = ({ isModalVisible, userClick, closeModalAbout }) => {
+const ModalAbout = ({
+  isModalVisible,
+  userClick,
+  closeModalAbout,
+  labelChanger,
+}) => {
   //references
   const modalContainer = useRef();
   const modalBodyLine1 = useRef();
@@ -91,15 +96,13 @@ const ModalAbout = ({ isModalVisible, userClick, closeModalAbout }) => {
         </ul>
         <div className="modal-bottom__contacts"></div>
         <button
-          onClick={closeModalAbout}
+          onClick={labelChanger}
           className="modal-bottom__button"
           ref={closeButton}
         >
           powrót
         </button>
       </address>
-      {/* <modalHistory /> */}
-      {/* <div className="modal-history"></div> */}
     </div>
   );
 };

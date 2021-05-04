@@ -16,7 +16,7 @@
       align-items: center;
       height: 100%;
       width: $iconSize;
-      opacity: 0.5;
+      // opacity: 0.5;
       color: $light;
       margin-left: 1rem;
       transition: transform 0.4s;
@@ -44,9 +44,7 @@
   //   }
   &__form {
     height: 100%;
-    // transition: 0.4s;
     cursor: pointer;
-    // opacity: 0.5;
   }
   //   @media (hover: hover) {
   //     .contact__form:hover {
@@ -59,10 +57,10 @@
     display: flex;
     align-items: center;
     margin-right: 5px;
-    // height: 100%;
     .logo {
-      opacity: 0.5;
-      // transition: 0.4s;
+      // opacity: 0.5;
+      color: $light;
+      letter-spacing: 1.2px;
     }
   }
   // @media (hover: hover) {

@@ -14,7 +14,7 @@ function SvgSkyHome1(props) {
       {...props}
     >
       <defs>
-        <filter id="shadow2">
+        <filter id="sunShadow">
           <feDropShadow
             dx="0"
             dy="0"
@@ -61,7 +61,7 @@ function SvgSkyHome1(props) {
         fill="none"
         stroke="#fff"
         strokeWidth={0.364}
-        filter="url(#shadow2)"
+        filter="url(#sunShadow)"
       />
       <path
         className="sunRD"
@@ -71,7 +71,7 @@ function SvgSkyHome1(props) {
         fill="none"
         stroke="#fff"
         strokeWidth={0.364}
-        filter="url(#shadow2)"
+        filter="url(#sunShadow)"
       />
       <path
         className="ray1a"
@@ -237,7 +237,7 @@ function SvgSkyHome1(props) {
           strokeWidth={0.364}
           strokeLinecap="round"
           strokeLinejoin="round"
-          filter="url(#shadow2)"
+          filter="url(#sunShadow)"
         />
 
         <path
@@ -492,49 +492,50 @@ function SvgSkyHome1(props) {
             strokeLinecap="round"
             strokeLinejoin="miter"
           />
-
-          <path
-            className="solarB"
-            d="M42.938 71.006 l6.994 16.951 16.122-.948-4.267-11.736z"
-            id="skyHome1_svg__solarB"
-            opacity={1}
-            fill="none"
-            fillOpacity={1}
-            stroke="#fff"
-            strokeWidth={0.265}
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-            strokeOpacity={1}
-          />
-          <path
-            className="solarA"
-            id="skyHome1_svg__solarA"
-            d="M43.353 70.235l6.994 16.952 16.122-.949-4.267-11.735z"
-            opacity={1}
-            fill="none"
-            stroke="#fff"
-            strokeWidth={0.265}
-            strokeLinecap="butt"
-            strokeLinejoin="miter"
-          />
-          <path
-            className="solarA-lineVertical"
-            d="m 53.848211,72.806317 6.217243,14.149719"
-            opacity={1}
-            fill="none"
-            stroke="#000"
-            strokeWidth={0.265}
-            strokeLinecap="butt"
-          />
-          <path
-            className="solarA-lineHorizontal"
-            d="m 47,78.795307 17.105556,1.688009"
-            opacity={1}
-            fill="none"
-            stroke="#000"
-            strokeWidth={0.265}
-            strokeLinecap="butt"
-          />
+          <g className="solars">
+            <path
+              className="solarB"
+              d="M42.938 71.006 l6.994 16.951 16.122-.948-4.267-11.736z"
+              id="skyHome1_svg__solarB"
+              opacity={1}
+              fill="none"
+              fillOpacity={1}
+              stroke="#fff"
+              strokeWidth={0.265}
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+              strokeOpacity={1}
+            />
+            <path
+              className="solarA"
+              id="skyHome1_svg__solarA"
+              d="M43.353 70.235l6.994 16.952 16.122-.949-4.267-11.735z"
+              opacity={1}
+              fill="none"
+              stroke="#fff"
+              strokeWidth={0.265}
+              strokeLinecap="butt"
+              strokeLinejoin="miter"
+            />
+            <path
+              className="solarA-lineVertical"
+              d="m 53.848211,72.806317 6.217243,14.149719"
+              opacity={1}
+              fill="none"
+              stroke="#000"
+              strokeWidth={0.265}
+              strokeLinecap="butt"
+            />
+            <path
+              className="solarA-lineHorizontal"
+              d="m 47,78.795307 17.105556,1.688009"
+              opacity={1}
+              fill="none"
+              stroke="#000"
+              strokeWidth={0.265}
+              strokeLinecap="butt"
+            />
+          </g>
         </g>
 
         <path

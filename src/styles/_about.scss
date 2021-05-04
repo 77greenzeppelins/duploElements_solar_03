@@ -1,0 +1,157 @@
+.top {
+  height: 30vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bottom {
+  // height: $bottomWrapper;
+  height: 70vh - $footerSize;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $light;
+  font-size: $fontSmall;
+  &__header {
+    color: $yellow;
+    font-size: $fontMiddle2;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.6;
+  }
+  &__paragraphs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.8;
+    // letter-spacing: 1px;
+  }
+  &__paragraph {
+    color: $light;
+    font-size: $fontSmall;
+    text-align: center;
+  }
+  &__header-line {
+    // visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 60%;
+    background: $light;
+    opacity: 0.5;
+  }
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    width: $wraperWidth;
+    height: $footerSize;
+    overflow: hidden;
+  }
+  &__footer-line {
+    // visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    height: 1px;
+    width: 100%;
+    // transform: scaleX(0);
+    background: $light;
+    opacity: 0.5;
+  }
+  //
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: $fontSmall;
+    opacity: 0.5;
+
+    svg {
+      font-size: $fontSmall;
+      opacity: 0.5;
+    }
+    p {
+      padding-left: 0.4rem;
+    }
+  }
+}
+//for <LabelledDroppedBox>
+.ldb {
+  height: 15%;
+  padding-left: 10px;
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    transition: color ease 0.4s;
+    cursor: pointer;
+    &:hover {
+      color: $green;
+      transition: color ease 0.4s;
+    }
+    svg {
+      color: $green;
+    }
+  }
+  &__text {
+    padding-left: 20px;
+  }
+  &__line {
+  }
+  &__panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    // background-color: lighten($dark, 50);
+    background-color: $dark;
+    z-index: 100;
+    &-content {
+      display: flex;
+      align-items: center;
+      // padding: 2rem;
+      text-align: justify;
+    }
+    &-icon {
+      color: $green;
+    }
+  }
+}
+// props.children of .lbd__panel-content
+.localization-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.localization__ul {
+  line-height: 1.8;
+  text-align: center;
+}
+.localization__li {
+}
+.localization__scope {
+  padding-top: 2rem;
+}
+//
+// &__localization {
+//   padding-top: 10px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   // line-height: 2;
+// }
+// &__contacts {
+//   height: $iconSize;
+//   border: 1px solid $light;
+// }
