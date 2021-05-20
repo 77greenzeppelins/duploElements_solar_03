@@ -1,1 +1,1 @@
-export { default as SvgSkyHome1 } from './SvgSkyHome1';
+export { default as Landscape0515V3 } from './Landscape0515V3'

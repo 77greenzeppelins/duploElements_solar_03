@@ -1,0 +1,10 @@
+.svg_icon__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  svg {
+    height: 100%;
+    width: $iconSize;
+  }
+}

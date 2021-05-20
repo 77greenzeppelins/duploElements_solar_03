@@ -1,0 +1,49 @@
+.ocf-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 100;
+  .ocf-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $dark;
+  }
+  .ocf-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    &__text-wrapper {
+      display: flex;
+      height: 90%;
+      padding: 2rem 1rem;
+    }
+    &__button-wrapper {
+      display: flex;
+      align-items: center;
+      height: 10%;
+      color: $light;
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $iconNavWrapper;
+      height: $iconNavWrapper;
+      cursor: pointer;
+      .svg-icon__wrapper {
+        width: inherit;
+        height: inherit;
+        svg {
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+}

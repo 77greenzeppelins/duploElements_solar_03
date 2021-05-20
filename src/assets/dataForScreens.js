@@ -5,6 +5,11 @@ const dream1 = [
   'elektryczne,',
   'które używasz na codzień...',
 ];
+// const dream1 = [
+//   'Wyobraź sobie',
+//   'wszystkie urządzenia elektryczne',
+//   'które używasz na codzień...',
+// ];
 const dream2 = [
   'Wyobraź sobie',
   'nowoczesne',
@@ -12,6 +17,11 @@ const dream2 = [
   'słoneczne',
   'na dachu Twojego domu...',
 ];
+// const dream2 = [
+//   'Wyobraź sobie',
+//   'nowoczesne panele słoneczne',
+//   'na dachu Twojego domu...',
+// ];
 const dream3 = [
   'Wyobraź sobie',
   'jakieś',
@@ -19,6 +29,11 @@ const dream3 = [
   'złotych',
   'na rachunkach za energię',
 ];
+// const dream3 = [
+//   'Wyobraź sobie',
+//   'jakieś zero złotych',
+//   'na rachunkach za energię',
+// ];
 const finalText = [
   'Wyobraź sobie',
   'oszczędzone',
@@ -38,7 +53,7 @@ const itemsToBuy = [
   'bezdomne zwierząta...',
 ];
 
-const pageAboutText = {
+const aboutRouteText = {
   header: 'Najlepsze solary pod Słońcem!',
   section1: 'Właśnie tym dzielimy się z naszymi Klienami.',
   section2: 'Czy Słońce może działać na Twój rachunek?',
@@ -60,10 +75,7 @@ const pageAboutText = {
     gps2: "16° 39' 38.6928'' E",
   },
 };
-const ourStory = {
-  story:
-    'W branży budowlanej działamy od 2000 roku. Zdobywaliśmy doświadczenie na licznych inwestycjach w kraju i za granicą. Pewnego, szalenie pracowitego dnia, kiedy nie wszystko szło po maszej myśl a ja właśnie nuciłem sobie "Alvays look on the bright side of life" nastąpił przełom. W zasadzie to oślepiło mnie Słońce. Ale było w tym rónież jakieś olśnienie! Świat jakby na momen się zatrzymał... A do mnie dotarła pewna myśl.. Zapragnąłem mieć Słońce w swojej ekipie, współpracować z Nim (a może Nią ?!)... Dlatego powstało duploELEMENTS! ',
-};
+
 const localization = [
   'Lokalizacja',
   'ul. Zacisze XXX',
@@ -75,11 +87,11 @@ const localization = [
 const scope =
   'Działamy na terenie województwa Dolnośląskiego, Opolskiego, Lubuskiego, Śląskiego';
 
-const pageAboutTextBottom = {
-  header1: ['Krótka historia naszego', 'Przewrótu Kopernikańskiego'],
-  header2: ['Treściwy formularz kontaktowy', 'dla tych, co lubią pisać'],
-  header3: ['Dane kontaktowe, czyli...', 'że istniejemy i gdzie działamy.'],
-};
+// const aboutRouteButtonLabels = {
+//   header1: ['Krótka historia naszego', 'Przewrótu Kopernikańskiego'],
+//   header2: ['Treściwy formularz kontaktowy', 'dla tych, co lubią pisać'],
+//   header3: ['Dane kontaktowe, czyli...', 'że istniejemy i gdzie działamy.'],
+// };
 
 // const textBox1 = [
 //   { id: 1, text: 'Wyobraź sobie proszę' },
@@ -109,10 +121,8 @@ export {
   dream3,
   finalText,
   itemsToBuy,
-  pageAboutText,
-  ourStory,
+  aboutRouteText,
   //
-  pageAboutTextBottom,
   localization,
   scope,
   //

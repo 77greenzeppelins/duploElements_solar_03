@@ -1,0 +1,28 @@
+.text-section {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: $fontMiddle;
+  font-family: $sanSerif;
+  line-height: 1.7;
+  visibility: hidden;
+  &__header {
+    font-family: $sanSerif;
+    font-size: $fontHeader;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  &__spans {
+    span {
+      padding-right: 5px;
+    }
+    :nth-of-type(2) {
+      color: $green;
+    }
+    :nth-of-type(3) {
+      padding-right: 0px;
+      color: $green;
+    }
+  }
+}

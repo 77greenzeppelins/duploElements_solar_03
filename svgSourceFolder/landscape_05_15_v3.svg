@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   height="710"
+   width="880">
+
+  <defs
+     id="defs844" />
+
+  <circle
+     r="93.655777"
+     cy="162.33669"
+     cx="426.35678"
+     id="path1409"
+     style="fill:#ffff00;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000" />
+  <rect
+     y="515.55273"
+     x="162.33669"
+     height="179.28392"
+     width="246.18091"
+     id="rect1411"
+     style="fill:#4d4d4d;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000" />
+</svg>

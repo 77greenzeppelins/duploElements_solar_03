@@ -1,0 +1,30 @@
+.overlay-opener__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin: 10px 0;
+  visibility: hidden;
+}
+.overlay-opener__label {
+  cursor: pointer;
+  font-size: $fontSmall;
+  letter-spacing: 0.5px;
+  color: $light;
+  line-height: 1.8;
+  // pointer-events: none;
+  // touch-action: none;
+}
+
+// @media (min-width: 600px) {
+//   .overlay-opener__wrapper {
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     width: 100%; //check media in: _overlayOpenerBox.scss / .overlay-openers-box_wrapper
+//   }
+//   .overlay-opener__label:nth-of-type(2) {
+//     margin-left: 6px;
+//   }
+// }
+// check media from _overlayOpenerBox.scss

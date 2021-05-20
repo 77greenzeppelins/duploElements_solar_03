@@ -21,6 +21,7 @@ $yellow: #ffe000;
 $wraperWidth: #{'min(91%, 700px)'};
 $headerSize: 0vh;
 $footerSize: 11vh;
+$bodySize: 100vh - $footerSize;
 $modalAboutSize: 100vh - $footerSize;
 $mainSize: 100vh - ($footerSize + $headerSize);
 
@@ -29,8 +30,10 @@ $bottomWrapper: 70vh - $footerSize;
 //
 $reactFont: #{'calc(10px + 2vmin)'};
 $fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
-$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.9rem)'};
+$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.5rem)'};
 $fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
+$fontHeader: #{'clamp(2rem, 7.1vw, 3rem)'};
+
 $fontMiddle2: #{'clamp(1.3rem, 5.1vw, 1.8rem)'};
 $fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
 $fontVerySmall: #{'clamp(0.5rem, 2.8vw, 0.7rem)'};
@@ -51,4 +54,5 @@ $clearSky: linear-gradient(to right, #005c97, #363795);
 //fonts
 $serif: 'Playfair Display', serif;
 $sanSerif: 'Montserrat', sans-serif;
+$handwrittenMali: 'Mali', cursive;
 // $sanserif: 'Playfair Display', serif;
