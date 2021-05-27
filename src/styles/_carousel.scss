@@ -1,0 +1,9 @@
+.carousel {
+  &__wrapper {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    outline: 1px solid $yellow;
+    overflow: hidden;
+  }
+}

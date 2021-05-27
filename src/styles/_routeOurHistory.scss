@@ -1,0 +1,81 @@
+.roh__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-bottom: $footerSize;
+  .roh-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: $dark;
+    z-index: 1000;
+    visibility: hidden;
+  }
+  .roh-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $dark;
+    z-index: 500;
+    // visibility: hidden;
+    &__text-wrapper {
+      display: flex;
+      height: 90vh;
+      padding: 2rem 1rem;
+    }
+    &__text-paragraph {
+      align-self: center;
+      font-size: $fontSmall;
+      line-height: 1.7;
+      letter-spacing: 0.5px;
+      color: $light;
+      span {
+        display: inline-block;
+        padding-bottom: 15px;
+        strong {
+          font-weight: 400;
+          color: $green;
+          font-size: $fontMiddle2;
+        }
+      }
+    }
+    &__button-wrapper {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 10vh;
+      margin: auto;
+      width: $wraperWidth;
+      color: $light;
+    }
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $iconNavWrapper;
+      height: $iconNavWrapper;
+      cursor: pointer;
+      .svg-icon__wrapper {
+        width: inherit;
+        height: inherit;
+        svg {
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+    &__bottom {
+      height: $footerSize;
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.contact-bar {
+  &__wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $footerSize;
+    width: $wraperWidth;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark;
+    z-index: 5;
+    padding: 0 50px;
+  }
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-radius: 50%;
+    background-color: $light;
+    opacity: 0.5;
+  }
+}
+.contact-bar__item {
+  display: flex;
+  opacity: 0.5;
+}
+@media (min-width: 550px) {
+  .contact-bar__wrapper {
+    padding: 0 120px;
+  }
+}

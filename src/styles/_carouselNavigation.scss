@@ -1,0 +1,10 @@
+.carousel-navigation {
+  &__wrapper {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // opacity: 0.3;
+  }
+}
