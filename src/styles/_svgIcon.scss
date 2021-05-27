@@ -1,10 +1,17 @@
-.svg_icon__wrapper {
+.icon-medium {
+  height: $iconMadium;
+  width: $iconMadium;
+}
+.icon-large {
+  height: $iconLarge;
+  width: $iconLarge;
+}
+.svg-icon__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   svg {
-    height: 100%;
-    width: $iconSize;
+    height: inherit;
+    width: inherit;
   }
 }

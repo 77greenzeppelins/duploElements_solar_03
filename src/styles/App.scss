@@ -9,22 +9,33 @@
 //================================== componentsShared
 @import '_brandLogo';
 @import '_svgIcon';
+@import '_linkToPath';
+@import '_contactBar';
+@import '_hamburgerMenuIcon';
+@import '_carousel';
+@import '_carouselNavigation';
+@import '_carouselSlider';
+@import '_slide';
+
 //================================== componentsUnique
-@import '_contactTab';
-@import 'contactTabLink';
 @import '_introAnimatedLogo';
 @import 'routesSwitcher';
 @import '_textBlock';
 //================================== RouteMain
-@import '_mainRouteBody';
+@import '_routeMainBody';
 //================================== RouteAbout
-@import '_aboutRouteBody';
+@import '_routeAboutBody';
+@import '_twoFacesCard';
 @import '_selfPresentation';
+@import '_innerRouteNavigator';
 @import '_ourStory';
 @import '_ourContactForm';
 @import '_overlayOpener';
 @import '_overlayOpenerBox';
-
+//================================== RouteOurHistory
+@import '_routeOurHistory';
+//================================== RouteContacts
+@import '_routeContacts';
 //================================== other
 @import '_skyHomeLandscape';
 //
@@ -39,15 +50,27 @@ body,
 html {
   user-select: none;
   visibility: hidden;
+  // overflow-y: scroll;
   overflow-x: hidden;
   overscroll-behavior: none;
   font-family: $sanSerif;
   font-weight: 400;
   line-height: 1.4;
+  font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $light;
   background: $dark;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient($green, transparent);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, $green);
 }
 // body {
 //   should work for mobile 100vh...
@@ -136,67 +159,3 @@ button {
   color: $light;
   z-index: 100;
 }
-//===========================================================================
-//========================================for TestPage
-// .full-width {
-//   width: 100%;
-// }
-// .center-all {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-// }
-// .flex-to-right {
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: center;
-// }
-// .flex-to-left {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-// }
-// .main {
-//   position: fixed;
-//   top: 0;
-//   width: $wraperWidth;
-//   height: $mainSize;
-//   overflow: hidden;
-//   &__logo {
-//     height: 100%;
-//   }
-//   &__top {
-//     width: 100%;
-//     height: 50%;
-//     svg {
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-//   &__bottom {
-//     height: 50%;
-//   }
-// }
-// .footer {
-//   position: fixed;
-//   bottom: 0;
-//   width: $wraperWidth;
-//   height: $footerSize;
-//   overflow: hidden;
-//   &__line {
-//     // visibility: hidden;
-//     position: absolute;
-//     top: 0;
-//     right: 0%;
-//     height: 1px;
-//     width: 100%;
-//     transform: scaleX(0);
-//     background: $light;
-//     opacity: 0;
-//   }
-//   .logo {
-//     font-size: $fontSmall;
-//   }
-// }
-
-//for <ContactIconsBar />

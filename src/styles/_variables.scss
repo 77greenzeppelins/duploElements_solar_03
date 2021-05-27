@@ -1,48 +1,40 @@
-//
-$tab-color: #ffffff;
-$active-color: #4563f3;
-$inactive-color: #bbc3cc;
-$background-color: #dde1e5;
-$shadow-color: darken($background-color, 15%);
 //colors
 $light: hsl(0, 0, 100);
-// $dark: #000;
-$dark: #1f1f1f;
+$dark: #000; // $dark:  //#1f1f1f;
 $darkLighten50: lighten($dark, 50%);
 $darkLighten80: lighten($dark, 80%);
-
-$green: #add100;
-$greenOlive: #3f4a05;
-$greenDarker5: darken($green, 5%);
-$blue: #2f80ed;
-$blueSky: #0ed2f7;
+$green: #add100; // $greenOlive: #3f4a05;
+$greenComplementary: #2300d1;
+// $greenDarker5: darken($green, 5%);
+$blueSky: #0ed2f7; // $blue: #2f80ed;
 $yellow: #ffe000;
 //sizes of page sections
 $wraperWidth: #{'min(91%, 700px)'};
 $headerSize: 0vh;
-$footerSize: 11vh;
+$footerSize: 9vh;
 $bodySize: 100vh - $footerSize;
 $modalAboutSize: 100vh - $footerSize;
 $mainSize: 100vh - ($footerSize + $headerSize);
-
-$topWrapper: 30vh;
-$bottomWrapper: 70vh - $footerSize;
-//
+//font sizes
 $reactFont: #{'calc(10px + 2vmin)'};
-$fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
-$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.5rem)'};
-$fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
-$fontHeader: #{'clamp(2rem, 7.1vw, 3rem)'};
-
-$fontMiddle2: #{'clamp(1.3rem, 5.1vw, 1.8rem)'};
-$fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
 $fontVerySmall: #{'clamp(0.5rem, 2.8vw, 0.7rem)'};
+$fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
+$fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
+$fontMiddle2: #{'clamp(1.3rem, 5.1vw, 1.8rem)'};
+$fontLarge: #{'clamp(1.5rem, 5.8vw, 2.5rem)'};
+$fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
+$fontHeader: #{'clamp(2rem, 7.1vw, 3rem)'};
+//font family
+$serif: 'Playfair Display', serif;
+$sanSerif: 'Montserrat', sans-serif;
+$handwrittenMali: 'Mali', cursive;
+// $sanserif: 'Playfair Display', serif;
 //icons
 $iconSize: #{'clamp(30px, 5vw, 40px)'};
+$iconMadium: #{'clamp(30px, 5vw, 40px)'};
 $iconNav: #{'clamp(30px, 5.1vw, 50px)'};
 $iconNavWrapper: #{'clamp(40px, 6.7vw, 60px)'};
-
-// $fontMiddle: #{'clamp(1rem, 3vw, 1.3rem)'};
+$iconLarge: #{'clamp(40px, 6.7vw, 60px)'};
 //gradients
 $green1: linear-gradient(to bottom right, #add100, #3f4a05);
 $darkGrey1: linear-gradient(to bottom right, #000000, #434343);
@@ -51,8 +43,3 @@ $darkGrey2: linear-gradient(to bottom, #000000, $darkLighten50, #000000 60%);
 $lightBgr1: linear-gradient(to right, #d6d0d0, #fff);
 $blueBeach: linear-gradient(to right bottom, #2f80ed, #56ccf2);
 $clearSky: linear-gradient(to right, #005c97, #363795);
-//fonts
-$serif: 'Playfair Display', serif;
-$sanSerif: 'Montserrat', sans-serif;
-$handwrittenMali: 'Mali', cursive;
-// $sanserif: 'Playfair Display', serif;

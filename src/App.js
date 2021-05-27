@@ -5,31 +5,39 @@ import './styles/App.scss';
 //componenty
 import IntroAnimatedLogo from './componentsUnique/introAnimatedLogo/IntroAnimatedLogo';
 import RoutesSwitcher from './componentsUnique/routesSwitcher/RoutesSwitcher';
-import ContactTab from './componentsUnique/contactTab/ContactTab';
-//staff for <ContactTab>
-import { businessMail, businessMobile } from './assets/businessData';
-import { SiMailDotRu } from 'react-icons/si';
-import { ImPhone } from 'react-icons/im';
 //staff for <RoutesSwitcher>
-import MainRoute from './routeMain/MainRoute';
-import AboutRoute from './routeAbout/AboutRoute';
+import RouteMain from './routeMain/RouteMain';
+import RouteAbout from './routeAbout/RouteAbout';
+import RouteContacts from './routeContacts/RouteContacts';
+import RouteOurHistory from './routeOurHistory/RouteOurHistory';
 
 const App = () => {
-  //
+  //some additional staff
   let timeUE = new Date().toLocaleTimeString();
   let milisecUE = new Date().getMilliseconds();
   console.log(`%c<App> / time`, 'color:#66ff00', `${timeUE}:${milisecUE}`);
   //
   const routes = [
-    { path: '/', name: 'Main', exact: true, Component: MainRoute },
-    { path: '/about', name: 'About', exact: false, Component: AboutRoute },
+    { path: '/', name: 'Main', exact: true, Component: RouteMain },
+    { path: '/about', name: 'About', exact: false, Component: RouteAbout },
+    {
+      path: '/contacts',
+      name: 'Contacts',
+      exact: false,
+      Component: RouteContacts,
+    },
+    {
+      path: '/ourhistory',
+      name: 'OurHistory',
+      exact: false,
+      Component: RouteOurHistory,
+    },
   ];
-  function getPaths(arr) {
-    return arr.map(item => item.path);
-  }
-  const appPaths = getPaths(routes);
-  console.log(`%c<App> / appPaths`, 'color:#66ff00', appPaths);
-
+  // function getPaths(arr) {
+  //   return arr.map(item => item.path);
+  // }
+  // const appPaths = getPaths(routes);
+  // console.log(`%c<App> / appPaths`, 'color:#66ff00', appPaths);
   //
   useEffect(() => {
     //I am not sure if it works...
@@ -54,14 +62,6 @@ const App = () => {
         <>
           {/*Pages / Routes section*/}
           <RoutesSwitcher routes={routes} />
-          {/*Foter / contacts & Navigation section*/}
-          <ContactTab
-            // labelChanger={labelChanger}
-            businessMail={`mailto:${businessMail}`}
-            businessMobile={`tel:${businessMobile}`}
-            linkTo={appPaths}
-            icons={[<SiMailDotRu />, <ImPhone />]}
-          />
         </>
       )}
     </>

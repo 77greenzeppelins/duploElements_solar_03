@@ -11,29 +11,12 @@ const selfPresentationText = {
     { id: 2, text: 'Czy Słońce może działać na Twój rachunek?' },
     { id: 6, text: 'My odpowiadamy:' },
 
-    { id: 3, text: '  Jasne, że tak!' },
+    { id: 3, text: ' Jasne, że tak!' },
     { id: 4, text: 'Ekipa z duploELEMENTS wie jak to zrobić!' },
   ],
 };
 
-const contentOpenersLabels = [
-  {
-    button: 1,
-    line1: 'Dane kontaktowe, czyli',
-    line2: 'co, gdzie i jak...',
-  },
-  {
-    button: 2,
-    line1: 'Formularz kontaktowy',
-    line2: 'dla tych, co lubią pisać',
-  },
-  {
-    button: 3,
-    line1: 'Nasz mały Przewrót ',
-    line2: 'Kopernikański',
-  },
-];
-
+//===============================================================================
 const ourStory = {
   intro:
     'W branży budowlanej działamy od 2000 roku. Doświadczenie zdobywaliśmy na licznych inwestycjach w kraju i za granicą.',
@@ -47,4 +30,4 @@ const ourStory = {
   conclusion: 'Dlatego powstało duploELEMENTS!',
 };
 
-export { contentOpenersLabels, selfPresentationText, ourStory };
+export { selfPresentationText, ourStory };
