@@ -1,12 +1,33 @@
 .slide {
   &__wrapper {
+    position: absolute;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
-    // width: 200px;
     width: 100%;
-    flex-shrink: 0;
+    visibility: hidden;
+  }
+  &__header {
+    color: $green;
+    font-size: $fontVeryLarge;
+    margin-bottom: 15px;
+    // line-height: 2;
+    span:nth-of-type(1) {
+      color: $light;
+    }
+  }
+  &__text-box {
+    font-size: $fontMiddle;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    color: $light;
+    margin-bottom: 10px;
+    q {
+      letter-spacing: 2px;
+      color: $green;
+    }
   }
 }

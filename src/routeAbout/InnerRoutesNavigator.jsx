@@ -15,9 +15,7 @@ const InnerRoutesNavigator = props => {
   let openMenuTL = useRef(gsap.timeline({ paused: true }));
   //
   useEffect(() => {
-    console.log('<InnerRouteNavigator> / useEffect / menuContent', [
-      ...menuContent.children,
-    ]);
+    console.log('<InnerRouteNavigator> / useEffect / cardBottom', cardBottom);
 
     isMenuVisible
       ? openMenuTL.current

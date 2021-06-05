@@ -1,0 +1,58 @@
+.nav-svg-bar {
+  &__wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $footerSize;
+    width: $wraperWidth;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4vw;
+    z-index: 115;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $contactSvgHeight;
+    width: $contactSvgWidth;
+    &.image {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      fill: $blueYellowTriadic;
+    }
+    &.icon {
+      position: absolute;
+      height: inherit;
+      width: inherit;
+      svg {
+        height: $contactIconHeight;
+        width: $contactIconWidth;
+        fill: $dark;
+      }
+    }
+  }
+
+  //   &__line {
+  //     position: absolute;
+  //     top: 10%;
+  //     left: 0;
+  //     right: 0;
+  //     height: 1px;
+  //     border-radius: 50%;
+  //     background-color: $light;
+  //     // background-color: $green;
+  //     // opacity: 0.5;
+  //   }
+}
+
+@media (min-width: 550px) {
+  .contact-bar__wrapper {
+    padding: 0 120px;
+  }
+}

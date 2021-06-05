@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 //components
-import SvgIcon from '../../componentsShared/svgIcon/svgIcon';
+import SvgIcon from '../svgIcon/svgIcon';
 //
-const ContactBar = props => {
+const NavigationBar = props => {
   const { businessMail, businessMobile, icons, iconSize } = props;
   const [emailIcon, phoneIcon] = icons;
-  // console.log('icons', icons);
+
   //
-  function onClick(e, data) {
+  const onClick = (e, data) => {
     window.location = data;
     e.preventDefault();
-  }
+  };
   //
   return (
-    <address className="contact-bar__wrapper">
-      <div className="contact-bar__line"></div>
-      <div className="contact-bar__item">
+    <nav className="navigation-bar__wrapper">
+      {/* <div className="navigation-bar__line"></div> */}
+      <div className="navigation-bar__contact-item">
         <Link
           className="icon mobile"
           to="#"
@@ -25,7 +25,8 @@ const ContactBar = props => {
           <SvgIcon icon={phoneIcon} iconSize={iconSize} />
         </Link>
       </div>
-      <div className="contact-bar__item">
+      <div className="navigation-bar__navigation-item">{props.children}</div>
+      <div className="navigation-bar__contact-item">
         <Link
           className="icon email"
           to="#"
@@ -34,8 +35,8 @@ const ContactBar = props => {
           <SvgIcon icon={emailIcon} iconSize={iconSize} />
         </Link>
       </div>
-    </address>
+    </nav>
   );
 };
 
-export default ContactBar;
+export default NavigationBar;

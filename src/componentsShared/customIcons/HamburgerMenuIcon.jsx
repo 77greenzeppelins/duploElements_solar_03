@@ -16,10 +16,14 @@ const HamburgerMenuIcon = props => {
     //changes of hamburger button
     !isMenuVisible
       ? HamburgerToCrossTL.current
-          .set(hamburgerWrapper, { pointerEvents: 'none' })
+          .set(hamburgerWrapper, { pointerEvents: 'none', autoAlpha: 1 })
           .to(lineMiddle, { duration: 0.2, scaleX: 0 })
-          .to(lineTop, { duration: 0.2, translateY: '+=10' })
-          .to(lineBottom, { duration: 0.2, translateY: '-=10' }, '<')
+          .to(lineTop, { duration: 0.2, translateY: '+=10', scale: 0.8 })
+          .to(
+            lineBottom,
+            { duration: 0.2, translateY: '-=10', scale: 0.8 },
+            '<'
+          )
           .to(lineTop, { rotate: '+=45deg' })
           .to(lineBottom, { rotate: '-=45deg' }, '<')
           .set(hamburgerWrapper, { pointerEvents: 'auto' })
@@ -28,8 +32,8 @@ const HamburgerMenuIcon = props => {
           .set(hamburgerWrapper, { pointerEvents: 'none' })
           .to(lineTop, { rotate: '-=45deg' })
           .to(lineBottom, { rotate: '+=45deg' }, '<')
-          .to(lineTop, { duration: 0.2, translateY: '-=10' })
-          .to(lineBottom, { duration: 0.2, translateY: '+=10' }, '<')
+          .to(lineTop, { duration: 0.2, translateY: '-=10', scale: 1 })
+          .to(lineBottom, { duration: 0.2, translateY: '+=10', scale: 1 }, '<')
           .to(lineMiddle, { duration: 0.2, scaleX: 1 })
           .set(hamburgerWrapper, { pointerEvents: 'auto' })
           .play();
@@ -37,6 +41,7 @@ const HamburgerMenuIcon = props => {
     setIsMenuVisible(!isMenuVisible);
   };
   console.log('<HamburgerMenuIcon> / openMenu / isMenuVisible ', isMenuVisible);
+  //
   return (
     <button
       ref={el => (hamburgerWrapper = el)}

@@ -1,24 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useHistory } from 'react-router-dom';
-// import { gsap } from 'gsap';
-//
-import Carousel from '../componentsShared/slidesCarousel/Carousel';
+import React, { useState, useEffect } from 'react';
+import RotatePanel from '../componentsShared/rotatePanel/RotatePanel';
+import RouteContactBody from './RouteContactBody';
 
 const RouteContacts = props => {
-  // const location = useLocation();
-  const history = useHistory();
-  // console.log('location', location);
-  console.log('history', history);
+  //
+  const getWindowDimension = () => {
+    const { innerHeight } = window;
+    return innerHeight;
+  };
+  const [windowHeight, setWindowHeight] = useState(getWindowDimension);
+  //
+  useEffect(() => {
+    window.addEventListener('resize', () =>
+      setWindowHeight(getWindowDimension)
+    );
+    return window.removeEventListener('resize', () =>
+      setWindowHeight(getWindowDimension)
+    );
+  });
+  useEffect(() => {
+    console.log('<RouteContacts> / useEffect / windowHeight', windowHeight);
+  }, [windowHeight]);
 
-  const goBackHandler = () => history.goBack();
-
-  return (
-    <div className="route-contacts__container">
-      <h1>Route Contacts</h1>
-      <Carousel />
-      <button onClick={goBackHandler}>go back!</button>
-    </div>
-  );
+  return <> {windowHeight < 500 ? <RotatePanel /> : <RouteContactBody />}</>;
 };
 
 export default RouteContacts;

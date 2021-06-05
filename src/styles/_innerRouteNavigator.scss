@@ -1,24 +1,26 @@
 .inner-route-navigator {
   &__wrapper {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    display: grid; // flex
-    // align-items: center;
-    // justify-content: center;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // place-items: center;
     width: 100%;
     z-index: 104;
     transform: scaleY(0);
     visibility: hidden;
     background-color: $dark;
+
+    z-index: 10;
   }
   &__content {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-bottom: 50px;
   }
   &__link {

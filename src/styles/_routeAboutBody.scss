@@ -6,8 +6,10 @@
     justify-content: center;
     width: 100%;
     // height: 100%; // 05_22 - testing...
-    padding-top: 40px;
+    padding-top: $sectionGapMiddle;
+    padding-bottom: $footerSizeEnlarged;
   }
+
   &__hamburger-wrapper {
     position: fixed;
     bottom: 0;
@@ -26,6 +28,12 @@
   &__hamburger-button {
     // padding: 20px 0;
     height: 100%;
+  }
+}
+
+@media (max-height: 700px) {
+  .about-route-body__main {
+    padding-top: $sectionGapVerySmall;
   }
 }
 

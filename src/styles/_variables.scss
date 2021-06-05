@@ -8,13 +8,19 @@ $greenComplementary: #2300d1;
 // $greenDarker5: darken($green, 5%);
 $blueSky: #0ed2f7; // $blue: #2f80ed;
 $yellow: #ffe000;
+$blueyellowComplementary: #001eff;
+$blueYellowTriadic: #00ffe1;
+
 //sizes of page sections
 $wraperWidth: #{'min(91%, 700px)'};
-$headerSize: 0vh;
-$footerSize: 9vh;
+$footerSize: 11vh;
+$footerSizeEnlarged: 9vh * 2;
+$footerSizeDowngrade: 9vh * 0.9;
 $bodySize: 100vh - $footerSize;
-$modalAboutSize: 100vh - $footerSize;
-$mainSize: 100vh - ($footerSize + $headerSize);
+$sectionGapMiddle: 9vh; //for RouteAbout
+$sectionGapSmall: 7vh;
+$sectionGapVerySmall: 5vh;
+
 //font sizes
 $reactFont: #{'calc(10px + 2vmin)'};
 $fontVerySmall: #{'clamp(0.5rem, 2.8vw, 0.7rem)'};
@@ -22,7 +28,7 @@ $fontSmall: #{'clamp(0.8rem, 2.8vw, 1rem)'};
 $fontMiddle: #{'clamp(1rem, 5.1vw, 1.4rem)'};
 $fontMiddle2: #{'clamp(1.3rem, 5.1vw, 1.8rem)'};
 $fontLarge: #{'clamp(1.5rem, 5.8vw, 2.5rem)'};
-$fontVeryLarge: #{'clamp(2.1rem, 7.1vw, 3.1rem)'};
+$fontVeryLarge: #{'clamp(3rem, 10vw, 3.5rem)'};
 $fontHeader: #{'clamp(2rem, 7.1vw, 3rem)'};
 //font family
 $serif: 'Playfair Display', serif;
@@ -35,6 +41,14 @@ $iconMadium: #{'clamp(30px, 5vw, 40px)'};
 $iconNav: #{'clamp(30px, 5.1vw, 50px)'};
 $iconNavWrapper: #{'clamp(40px, 6.7vw, 60px)'};
 $iconLarge: #{'clamp(40px, 6.7vw, 60px)'};
+//svg for animations
+$svgMiddle: #{'clamp(5.5rem, 12.1vw, 7.5rem)'};
+//svg in <ContactBar>
+$contactSvgHeight: $footerSize * 0.9;
+$contactSvgWidth: $footerSize * 0.9;
+$contactIconHeight: $contactSvgHeight * 0.45;
+$contactIconWidth: $contactSvgWidth * 0.45;
+
 //gradients
 $green1: linear-gradient(to bottom right, #add100, #3f4a05);
 $darkGrey1: linear-gradient(to bottom right, #000000, #434343);
@@ -43,3 +57,8 @@ $darkGrey2: linear-gradient(to bottom, #000000, $darkLighten50, #000000 60%);
 $lightBgr1: linear-gradient(to right, #d6d0d0, #fff);
 $blueBeach: linear-gradient(to right bottom, #2f80ed, #56ccf2);
 $clearSky: linear-gradient(to right, #005c97, #363795);
+
+//
+// $headerSize: 0vh;
+// $modalAboutSize: 100vh - $footerSize;
+// $mainSize: 100vh - ($footerSize + $headerSize);

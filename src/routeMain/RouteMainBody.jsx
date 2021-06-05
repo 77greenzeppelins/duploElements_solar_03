@@ -11,7 +11,7 @@ import { sunRingRotation } from '../animations/additionalAnimations';
 import { ReactComponent as SLopti2 } from '../assets/svg/socketOnFace2opti.svg';
 //
 //import SkyHomeLandscape from '../assets/svg/SkyHomeLandscape';
-import ContactBar from '../componentsShared/contactBar/ContactBar';
+import NavigationBar from '../componentsShared/navigationBar/NavigationBar';
 import BrandLogo from '../componentsShared/brandLogo/BrandLogo';
 //staff for <ContactBar>
 import { businessMail, businessMobile } from '../assets/businessData';
@@ -73,11 +73,11 @@ const RouteMainBody = () => {
     //step3: set the perspective
     //
     // gsap.set(textBox1Header, { perspective: 400 });
-    console.log(
-      `%c<MainBody> / useEffect / tb2Header.chars `,
-      'color:#00d2ff',
-      textBox2Header.chars
-    );
+    // console.log(
+    //   `%c<MainBody> / useEffect / tb2Header.chars `,
+    //   'color:#00d2ff',
+    //   textBox2Header.chars
+    // );
     mainBodyTL.current
       // .set(topSection, { autoAlpha: 0 }) // is not necessary...
       .set(textBox1, { autoAlpha: 1 })
@@ -115,27 +115,22 @@ const RouteMainBody = () => {
         <TextBlock textData={dream1} />
         <TextBlock textData={dream2} />
         <TextBlock textData={dream3} />
-        <ContactBar
+
+        <NavigationBar
           businessMail={`mailto:${businessMail}`}
           businessMobile={`tel:${businessMobile}`}
           icons={[<SiMailDotRu />, <ImPhone />]}
           iconSize="icon-medium"
-        />
-        <nav className="main-route-body__logo-link">
-          {/* <Link
-            to={{
-              pathname: '/about',
-              state: {
-                from: '/',
-              },
-            }}
-          >
-            <BrandLogo vertical />
-          </Link> */}
+        >
           <LinkWithState pathname="/about" from="/">
             <BrandLogo vertical />
           </LinkWithState>
-        </nav>
+        </NavigationBar>
+        {/* <nav className="main-route-body__logo-link">
+          <LinkWithState pathname="/about" from="/">
+            <BrandLogo vertical />
+          </LinkWithState>
+        </nav> */}
       </div>
     </>
   );
@@ -219,3 +214,14 @@ export default RouteMainBody;
 //   return () => mainBodyTL.current.kill();
 // }, []);
 //
+
+//  <Link
+//             to={{
+//               pathname: '/about',
+//               state: {
+//                 from: '/',
+//               },
+//             }}
+//           >
+//             <BrandLogo vertical />
+//           </Link>

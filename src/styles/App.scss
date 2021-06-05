@@ -7,16 +7,19 @@
 //
 @import '_variables';
 //================================== componentsShared
+@import '_animatedTextLine';
 @import '_brandLogo';
 @import '_svgIcon';
 @import '_linkToPath';
-@import '_contactBar';
+@import '_navigationBar';
+@import '_navigationSvgBar';
 @import '_hamburgerMenuIcon';
 @import '_carousel';
 @import '_carouselNavigation';
 @import '_carouselSlider';
 @import '_slide';
-
+@import '_navigationArrows';
+@import '_svgPlusText';
 //================================== componentsUnique
 @import '_introAnimatedLogo';
 @import 'routesSwitcher';
@@ -33,9 +36,9 @@
 @import '_overlayOpener';
 @import '_overlayOpenerBox';
 //================================== RouteOurHistory
-@import '_routeOurHistory';
+@import '_routeOurHistoryBody';
 //================================== RouteContacts
-@import '_routeContacts';
+@import '_routeContactBody';
 //================================== other
 @import '_skyHomeLandscape';
 //
@@ -61,17 +64,26 @@ html {
   -moz-osx-font-smoothing: grayscale;
   color: $light;
   background: $dark;
+  //experiments with hidding horizontal scroll bar
+  ::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  //...
 }
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient($green, transparent);
-  border-radius: 6px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, $green);
-}
+//experiments with styling horizontal scroll bar...not sure...
+// ::-webkit-scrollbar {
+//   width: 8px;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background: linear-gradient($green, transparent);
+//   border-radius: 6px;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background: linear-gradient(transparent, $green);
+// }
+//...
 // body {
 //   should work for mobile 100vh...
 //   min-height: -webkit-fill-available;

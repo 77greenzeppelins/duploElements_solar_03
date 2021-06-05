@@ -10,6 +10,13 @@ import RouteMain from './routeMain/RouteMain';
 import RouteAbout from './routeAbout/RouteAbout';
 import RouteContacts from './routeContacts/RouteContacts';
 import RouteOurHistory from './routeOurHistory/RouteOurHistory';
+//gsap plugins and
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { wordsFlopping } from './animations/textAnimationLibrary';
+//
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerEffect(wordsFlopping);
+//
 
 const App = () => {
   //some additional staff

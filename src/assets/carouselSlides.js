@@ -6,7 +6,7 @@ const ourStory = {
     {
       enlightenment: { line1: 'Doznałem ', line2: 'olśnienia!' },
       text1:
-        'To był dzień jak codzień, ręce pełne roboty. Wszystko szło pięknie, choć przed południem dała o sobie zanć jakaś niepomyślna passa.',
+        'To był dzień jak codzień, ręce pełne roboty. Wszystko szło pięknie, choć przed południem dała o sobie znać jakaś niepomyślna passa.',
     },
     {
       text1:

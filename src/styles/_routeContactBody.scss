@@ -1,0 +1,124 @@
+.rcd {
+  &-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $footerSize;
+    width: $wraperWidth;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // background-color: lighten($dark, 3%);
+    &__svg-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $contactSvgHeight;
+      width: $contactSvgWidth;
+      &.image {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        fill: $blueYellowTriadic;
+      }
+      &.icon {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        svg {
+          height: $contactIconHeight;
+          width: $contactIconWidth;
+          fill: $dark;
+        }
+      }
+    }
+  }
+  &-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    &__top {
+      margin: auto;
+      padding: 8vh 0 5vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: fit-content;
+      font-size: $fontVeryLarge;
+      line-height: 1.7;
+      color: $green;
+      visibility: hidden;
+    }
+    &__bottom {
+      text-align: center;
+      font-size: $fontMiddle2;
+      line-height: 2;
+      color: $light;
+      visibility: hidden;
+    }
+  }
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    padding: 8vh 5vw;
+    visibility: hidden;
+    overflow: hidden;
+  }
+
+  //
+  //   &-hero {
+  //     display: grid;
+  //     place-content: center center;
+  //     height: 100vh;
+  //     font-size: $fontVeryLarge;
+  //     padding-bottom: 25px;
+  //     line-height: 2;
+  //     color: $green;
+  //   }
+
+  //   &-header {
+  //     font-size: $fontLarge;
+  //     padding-bottom: 25px;
+  //     line-height: 1.7;
+  //   }
+  //   &-text {
+  //     font-size: $fontMiddle;
+  //     padding-bottom: 35px;
+  //     line-height: 1.7;
+  //   }
+  //   &-svg {
+  //     padding-bottom: 35px;
+  //     line-height: 1.7;
+  //   }
+  // &-footer {
+  //   position: fixed;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: $footerSize;
+  //   width: $wraperWidth;
+  //   margin: auto;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   // background: linear-gradient(to top, $dark 90%, transparent); // = 0deg
+  //   // // backdrop-filter: blur(5px);
+  //   background-color: #222;
+  //   // padding: 0 50px;
+  //   z-index: 115;
+  //   // &__menu {
+  //   //   height: $footerSizeDowngrade;
+  //   //   svg {
+  //   //     height: inherit;
+  //   //   }
+  //   // }
+  // }
+}

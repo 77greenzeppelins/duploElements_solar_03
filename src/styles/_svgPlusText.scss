@@ -1,0 +1,19 @@
+.svg-plus-text {
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  &__svg-wrapper {
+    height: $svgMiddle;
+    svg {
+      width: inherit;
+      height: inherit;
+      fill: $green;
+    }
+  }
+  &__text-wrapper {
+    font-size: $fontMiddle;
+    padding-left: 5vw;
+  }
+}
